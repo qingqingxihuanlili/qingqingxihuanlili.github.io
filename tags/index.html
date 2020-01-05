@@ -333,6 +333,43 @@
 
 
 
+  <section id="comments" class="comments">
+    <style>
+      .comments{margin:30px;padding:10px;background:#fff}
+      @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
+    </style>
+    
+<div id="vcomment" class="comment"></div>
+<script src="//cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+<script src='//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js'></script>
+<script>
+   var notify = 'false' == true ? true : false;
+   var verify = 'false' == true ? true : false;
+   new Valine({
+            av: AV,
+            el: '#vcomment',
+            notify: notify,
+            verify: verify,
+            app_id: "DuJwRf0FQuyzfjTLAJl4Mmre-gzGzoHsz",
+            app_key: "MFLTq2lcP3inYcUbqBMjy5Ub",
+            placeholder: "ヾﾉ≧∀≦)o快来评论一下吧!",
+            avatar: "mm",
+            avatar_cdn: "",
+            pageSize: 10
+    });
+    if(window.location.hash){
+        var checkExist = setInterval(function() {
+           if ($(window.location.hash).length) {
+              $('html, body').animate({scrollTop: $(window.location.hash).offset().top-90}, 1000);
+              clearInterval(checkExist);
+           }
+        }, 100);
+    }
+</script>
+
+  </section>
+
 
           </div>
         </div>
