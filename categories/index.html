@@ -41,54 +41,67 @@
 
 <meta name="generator" content="Hexo 4.2.0"></head>
 
-<body>
+<!--鼠标点击烟花爆炸效果，需要引入jQuery-->
+
+
+<!--单击显示文字-->
+
+	<script type="text/javascript" src="/jquery.min.js"></script>
+	<script type="text/javascript" src="/click_show_text.js"></script>
+
+
+
+
+<body style="background: url('/img/bg.jpg'); background-size: cover;background-repeat: no-repeat;opacity: 0.8">
   <div id="container" q-class="show:isCtnShow">
-    <canvas id="anm-canvas" class="anm-canvas"></canvas>
+    <canvas id="anm-canvas canvas" class="anm-canvas"></canvas>
     <div class="left-col" q-class="show:isShow">
       
-<div class="overlay" style="background: url('https://w.wallhaven.cc/full/k9/wallhaven-k9zqjd.png') no-repeat center bottom;background-size: cover;"></div>
-<div class="intrude-less" style="font-family:FangSong">
-	<header id="header" class="inner">
-		<a href="/" class="profilepic">
-			<img src="/img/head.jpg" class="js-avatar">
-		</a>
-		<hgroup>
-		  <h1 class="header-author"><a href="/">青青</a></h1>
-		</hgroup>
-		
-		<nav style="color:#800080;margin-top:12px">
-			今天也是喜欢里里的一天
-		</nav>
-		<nav class="header-menu" style="margin-top:12px">
-			<ul>
+<div style="">
+	<div class="overlay"></div>
+	<div class="intrude-less" style="font-family:FangSong">
+		<header id="header" class="inner">
+			<a href="/" class="profilepic">
+				<img src="/img/head.jpg" class="js-avatar">
+			</a>
+			<hgroup>
+			  <h1 class="header-author"><a href="/">青青</a></h1>
+			</hgroup>
 			
-				<li><a href="/">主页</a></li>
-	        
-				<li><a href="/categories">分类</a></li>
-	        
-				<li><a href="/archives">归档</a></li>
-	        
-				<li><a href="/">相册</a></li>
-	        
-			</ul>
-		</nav>
-		<nav class="header-smart-menu" style="margin-top:12px">
-    		
-    			
-    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
-    			
-            
-    			
-    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
-    			
-            
-		</nav>
-		<nav class="header-nav">
-			<div class="social">
+			<nav style="color:#800080;margin-top:12px">
+				今天也是喜欢里里的一天
+			</nav>
+			<nav class="header-menu" style="margin-top:12px">
+				<ul>
 				
-			</div>
-		</nav>
-	</header>		
+					<li><a href="/">主页</a></li>
+				
+					<li><a href="/categories">分类</a></li>
+				
+					<li><a href="/archives">归档</a></li>
+				
+					<li><a href="/">相册</a></li>
+				
+				</ul>
+			</nav>
+			<nav class="header-smart-menu" style="margin-top:12px">
+				
+					
+					<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
+					
+				
+					
+					<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
+					
+				
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+				</div>
+			</nav>
+		</header>		
+	</div>
 </div>
 
     </div>
@@ -236,7 +249,11 @@
 </footer>
 
 <!--页面点击小红心-->
+
 <script type="text/javascript" src="/love.js"></script>
+
+
+
 
     </div>
     <script>
@@ -437,6 +454,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     </div>
 
 </div>
+
   </div>
 </body>
+<!-- 雪花特效3 -->
+
+  <script type="text/javascript" src="/snow3.js"></script>
+
 </html>
