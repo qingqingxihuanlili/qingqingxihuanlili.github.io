@@ -6,21 +6,31 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://qingqingxihuanlili.github.io">
-  <title>设计模式六大原则 | qingqing αρέσει η lili</title>
+  <title>UML类图学习 | qingqing αρέσει η lili</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="设计模式在软件工程中，设计模式是对软件设计中普遍存在或者反复出现的各种问题的所提出的解决方案。无论是OA,ERP,CRM系统的设计开发全部都会遇到的一些问题，我们就需要通过设计模式的知识来解决。我们所写的面向对象程序是由各个功能模块组成的，各个功能模块就是由设计模式，算法以及数据结构所组成的。而在我们所使用已经写好的框架里面也包含了多种设计模式。所以设计模式一直都在我们日常代码开发中。接下来主要介">
+  <meta name="description" content="UML介绍统一建模语言（Unified Modeling Language，缩写UML）是非专利的第三代建模和规约语言。UML是一种开放的方法，用于说明、可视化、构建和编写一个正在开发的、面向对象的、软件密集系统的制品的开放方法。用于帮助软件开发人员进行思考和记录思路的结果，UML本身是一套符号的规定，就像数学符号和化学符号一样，这些符号用于描述软件模型中的各个元素和他们之间的关系。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="设计模式六大原则">
-<meta property="og:url" content="https://qingqingxihuanlili.github.io/2020/05/20/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%85%AD%E5%A4%A7%E5%8E%9F%E5%88%99/index.html">
+<meta property="og:title" content="UML类图学习">
+<meta property="og:url" content="https://qingqingxihuanlili.github.io/2020/05/25/UML%E7%B1%BB%E5%9B%BE%E5%AD%A6%E4%B9%A0/index.html">
 <meta property="og:site_name" content="qingqing αρέσει η lili">
-<meta property="og:description" content="设计模式在软件工程中，设计模式是对软件设计中普遍存在或者反复出现的各种问题的所提出的解决方案。无论是OA,ERP,CRM系统的设计开发全部都会遇到的一些问题，我们就需要通过设计模式的知识来解决。我们所写的面向对象程序是由各个功能模块组成的，各个功能模块就是由设计模式，算法以及数据结构所组成的。而在我们所使用已经写好的框架里面也包含了多种设计模式。所以设计模式一直都在我们日常代码开发中。接下来主要介">
+<meta property="og:description" content="UML介绍统一建模语言（Unified Modeling Language，缩写UML）是非专利的第三代建模和规约语言。UML是一种开放的方法，用于说明、可视化、构建和编写一个正在开发的、面向对象的、软件密集系统的制品的开放方法。用于帮助软件开发人员进行思考和记录思路的结果，UML本身是一套符号的规定，就像数学符号和化学符号一样，这些符号用于描述软件模型中的各个元素和他们之间的关系。">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-05-20T08:23:53.000Z">
-<meta property="article:modified_time" content="2020-05-25T04:21:59.224Z">
+<meta property="og:image" content="https://qingqingxihuanlili.github.io/images/UML%E7%B1%BB%E5%9B%BE%E5%AD%A6%E4%B9%A0/person.png">
+<meta property="og:image" content="https://qingqingxihuanlili.github.io/images/UML%E7%B1%BB%E5%9B%BE%E5%AD%A6%E4%B9%A0/des.png">
+<meta property="og:image" content="https://qingqingxihuanlili.github.io/images/UML%E7%B1%BB%E5%9B%BE%E5%AD%A6%E4%B9%A0/ph1.png">
+<meta property="og:image" content="https://qingqingxihuanlili.github.io/images/UML%E7%B1%BB%E5%9B%BE%E5%AD%A6%E4%B9%A0/ph2.png">
+<meta property="og:image" content="https://qingqingxihuanlili.github.io/images/UML%E7%B1%BB%E5%9B%BE%E5%AD%A6%E4%B9%A0/ph3.png">
+<meta property="og:image" content="https://qingqingxihuanlili.github.io/images/UML%E7%B1%BB%E5%9B%BE%E5%AD%A6%E4%B9%A0/ph4.png">
+<meta property="og:image" content="https://qingqingxihuanlili.github.io/images/UML%E7%B1%BB%E5%9B%BE%E5%AD%A6%E4%B9%A0/ph5.png">
+<meta property="og:image" content="https://qingqingxihuanlili.github.io/images/UML%E7%B1%BB%E5%9B%BE%E5%AD%A6%E4%B9%A0/ph6.png">
+<meta property="og:image" content="https://qingqingxihuanlili.github.io/images/UML%E7%B1%BB%E5%9B%BE%E5%AD%A6%E4%B9%A0/ph7.png">
+<meta property="article:published_time" content="2020-05-25T06:55:09.000Z">
+<meta property="article:modified_time" content="2020-05-25T09:06:36.629Z">
 <meta property="article:author" content="青青">
 <meta property="article:tag" content="设计模式">
-<meta property="article:tag" content="六大设计原则">
+<meta property="article:tag" content="UML类图">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://qingqingxihuanlili.github.io/images/UML%E7%B1%BB%E5%9B%BE%E5%AD%A6%E4%B9%A0/person.png">
   
     <link rel="alternative" href="/atom.xml" title="qingqing αρέσει η lili" type="application/atom+xml">
   
@@ -168,56 +178,117 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-设计模式六大原则" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-UML类图学习" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      设计模式六大原则
+      UML类图学习
     </h1>
   
 
         
-        <a href="/2020/05/20/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%85%AD%E5%A4%A7%E5%8E%9F%E5%88%99/" class="archive-article-date">
-  	<time datetime="2020-05-20T08:23:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-20</time>
+        <a href="/2020/05/25/UML%E7%B1%BB%E5%9B%BE%E5%AD%A6%E4%B9%A0/" class="archive-article-date">
+  	<time datetime="2020-05-25T06:55:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-25</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h1><p>在软件工程中，设计模式是对软件设计中普遍存在或者反复出现的各种问题的所提出的解决方案。<br>无论是OA,ERP,CRM系统的设计开发全部都会遇到的一些问题，我们就需要通过设计模式的知识来解决。<br>我们所写的面向对象程序是由各个功能模块组成的，各个功能模块就是由设计模式，算法以及数据结构所组成的。而在我们所使用已经写好的框架里面也包含了多种设计模式。所以设计模式一直都在我们日常代码开发中。<br>接下来主要介绍设计模式的六大设计原则。</p>
-<a id="more"></a>
-<h1 id="六大设计原则"><a href="#六大设计原则" class="headerlink" title="六大设计原则"></a>六大设计原则</h1><p>这六个设计原则分别是：    </p>
-<p>单一职责原则  </p>
-<p>接口隔离原则 </p>
-<p>依赖倒转原则 </p>
-<p>里式替换原则  </p>
-<p>开闭原则  </p>
-<p>迪米特法则 </p>
-<h1 id="单一职责原则"><a href="#单一职责原则" class="headerlink" title="单一职责原则"></a>单一职责原则</h1><p>官方说法是：一个类,应该只有一个引起它变化的原因。<br>通俗来讲就是，一个类只负责一件事情，例如当我们写dao的时候，一个类只对应一张属性表。如果一个类负责两件事情A和B时，当我们的A事情改变需要修改这个类，很有可能导致事情B的失效。<br>所以单一职责的意义是各司其职、各负其责。这样提高类的可读性，可维护性。<br>Ps：在有的设计当中，我们不可避免的要违背单一职责原则，有一句话说的好：没有最好的设计，只有最适合的设计。当我们设计软件的时候，要联系实际情况，规矩是死的，而我们人是活的。  </p>
-<h1 id="接口隔离原则"><a href="#接口隔离原则" class="headerlink" title="接口隔离原则"></a>接口隔离原则</h1><p>客户端不应该依赖它不需要的接口，即一个类对另一个的依赖应该建立在最小的接口上。  </p>
-<p>简而言之就是让客户端依赖的接口尽可能的小，我们知道java中有这样一个概念，当类实现一个接口的时候一定要把所有的方法都要实现，对于抽象类来说我们不必重写全部的方法，而对于非抽象类实现一个接口就要重写它的全部方法，而如果有的方法我们不需要也还是要重写，这就增加了无用的代码量，不是一个很好的代码规范。</p>
-<p>所以接口隔离原则就是我们实现的接口要尽可能的小，不应该有我们不需要的方法，细化接口降低耦合性，提高代码的可读性。</p>
-<h1 id="依赖倒转原则"><a href="#依赖倒转原则" class="headerlink" title="依赖倒转原则"></a>依赖倒转原则</h1><p>定义是高层模块不应该依赖低层模块，二者都应该依赖其抽象；抽象不应该依赖细节；细节应该依赖抽象。    </p>
-<p>依赖倒转原则的中心思想是面向接口编程，相对于细节的多变性，抽象的东西要稳定的多。以抽象为基础搭建的架构比以细节为基础的架构要稳定的多。<br>使用接口或者抽象类的目的是制定好规范，而不涉及任何具体的操作，把展现细节的任务交给他们的实现类去完成。接口和抽象类的作用就是设计。  </p>
-<p>用我自己的想法就是说，如果我们不依赖抽象而是依赖细节，我们遇到新的功能时要频繁的修改细节类，这明显费时费力。而如果我们依赖抽象，通过定义接口的方式，只是设计出了一个模子，我们的设计将更有弹性。  </p>
-<p>低层模块尽量都要有抽象类或者接口，或者两者都有，程序的稳定性更好。<br>变量的声明类型尽量是抽象类或者接口  </p>
-<pre><code>@Autowired
-private ISomeService someService;      </code></pre><p>这句代码还是很常见的，出现在我们controller层，对服务层的调用。<br>这时我们声明的变量someService就是来自接口ISomeService而不是他的实现类SomeServiceImpl。这样我们的变量引用和实际对象间，就存在一个缓冲层，利于程序扩展和优化。</p>
-<p>继承时遵循里式替换原则。  </p>
-<h1 id="里式替换原则"><a href="#里式替换原则" class="headerlink" title="里式替换原则"></a>里式替换原则</h1><p>里式替换原则规范了类的继承原则。<br>当我们引用基类的地方必须能透明的使用其子类的对象。就是说当我们使用父类的时候，把父类换成继承他的子类，程序的行为没有发生变化。<br>所以我们的子类尽量不要重写父类的方法，继承实际上让两个类耦合性增强了，在适当情况下，可以通过聚合，组合，依赖来解决问题。  </p>
-<p>而当在实际编程中，我们常常会通过重写父类的方法去完成新的功能，这样写起来虽然简单，但整个继承体系的复用性会比较差。特别是运行多态比较频繁的时候。<br>通用的做法是：原来的父类和子类都继承一个更通俗的基类，原有的继承关系去掉，采用依赖，聚合，组合等关系替代。  </p>
-<p>当我们使用继承时，一定要谨记子类必须完全实现父类的方法，子类可以有自己的方法，子类中方法的前置条件必须比超类中被覆写的方法的前置条件相同或者更宽松。子类中方法的后置条件必须与超类中被覆写的方法的后置条件相同或者更严格。  </p>
-<h1 id="开闭原则"><a href="#开闭原则" class="headerlink" title="开闭原则"></a>开闭原则</h1><p>一个软件实体例如类，模块或者函数，他们应该对扩展开放，对修改关闭。用抽象构建框架，用实现扩展细节。<br>当软件需要变化时，尽量通过扩展软件实体的行为来实现变化，而不是通过修改已有的代码来实现变化。  </p>
-<p>每个软件在其生命周期内都会发生很多变化，这几乎是不可避免的。无论是需求的变化、业务逻辑的变化、程序代码的变化等等，这些变化都有可能对整个软件的稳定性造成一定的威胁。<br>而开闭原则就是应对这些变化的，它告诉我们应该通过扩展来实现变化，而不是通过修改已有的代码。   </p>
-<h1 id="迪米特法则"><a href="#迪米特法则" class="headerlink" title="迪米特法则"></a>迪米特法则</h1><p>一个对象应该对其他对象保持最少的了解  </p>
-<p>类与类之间的关系越密切，耦合度越大，当一个类发生改变时，对另一个类的影响也越大。我们应该尽量降低类与类之间的耦合。  </p>
-<p>一个类对自己依赖的类知道的越少越好。也就是说，对于被依赖的类不管多么复杂，都尽量将逻辑封装在类的内部。对外除了提供的public方法，不对外泄露任何信息。  </p>
-<p>迪米特法则另一种定义是只与直接的朋友通信。每个对象都会与其他对象有耦合关系，只要两个对象之间有耦合关系，我们就说这两个对象之间是朋友关系。耦合的方式很多，依赖、关联、组合、聚合等。<br>其中，我们称出现成员变量、方法参数、方法返回值中的类为直接的朋友，而出现在局部变量中的类则不是直接的朋友。也就是说，陌生的类最好不要作为局部变量的形式出现在类的内部。    </p>
-<p>例如 A类依赖了B类，如果A类中直接出现了B这种写法就是说B类以成员变量出现在A中，或者是出现A方法中的参数里面，或者时出现在A方法的返回值里面都是直接的朋友，这种迪米特是法则是提倡的。<br>而仅仅在A的方法里面定义了B，那B就是局部变量，就是陌生的类，迪米特法则不提倡这种写法。<br>迪米特法则的核心是降低类之间的依赖，但是并不是要求完全没有依赖关系。  </p>
+        <h1 id="UML介绍"><a href="#UML介绍" class="headerlink" title="UML介绍"></a>UML介绍</h1><p>统一建模语言（Unified Modeling Language，缩写UML）是非专利的第三代建模和规约语言。<br>UML是一种开放的方法，用于说明、可视化、构建和编写一个正在开发的、面向对象的、软件密集系统的制品的开放方法。<br>用于帮助软件开发人员进行思考和记录思路的结果，UML本身是一套符号的规定，就像数学符号和化学符号一样，这些符号用于描述软件模型中的各个元素和他们之间的关系。    </p>
+<a id="more"></a>  
+<h1 id="UML类图"><a href="#UML类图" class="headerlink" title="UML类图"></a>UML类图</h1><p>类图是描述类与类之间的关系的，是UML图中最核心的，类和类之间关系一共有：依赖，泛化，实现，关联，聚合与组合六种。  </p>
+<p>代码形式的类  </p>
+<pre><code>public class Person{  
+
+    private Integer id;  
+    private String name;  
+    public void setName(String name){  
+          this.name = name;  
+
+    }  
+    public void getName(){  
+          return name;
+    }
+}  </code></pre><p>UML类图形式的类   </p>
+<p><img src="/images/UML%E7%B1%BB%E5%9B%BE%E5%AD%A6%E4%B9%A0/person.png" alt="">   </p>
+<h1 id="类与类之间的关系表达"><a href="#类与类之间的关系表达" class="headerlink" title="类与类之间的关系表达"></a>类与类之间的关系表达</h1><p>类和类之间关系一共有：依赖，泛化，实现，关联，聚合与组合六种。  </p>
+<p><img src="/images/UML%E7%B1%BB%E5%9B%BE%E5%AD%A6%E4%B9%A0/des.png" alt="">    </p>
+<h3 id="依赖关系"><a href="#依赖关系" class="headerlink" title="依赖关系"></a>依赖关系</h3><p>只要是在类中用到了对方，那么他们之间就存在依赖关系。</p>
+<pre><code>public class PersonServiceBean{  
+    private PersonDao personDao;
+    public void save(Person person){}  
+    public IDCard getIDCard(Integer personid){}
+    public void modify(){
+        Department department = new Department();
+    }
+}  </code></pre><p>在上面的代码中PersonServiceBean这个类，依赖于personDao，Person，IDCard，Department这四个类，其中personDao，Person，IDCard这三个类是直接联系。Department是间接联系。但是都是依赖。  </p>
+<p><img src="/images/UML%E7%B1%BB%E5%9B%BE%E5%AD%A6%E4%B9%A0/ph1.png" alt="">  </p>
+<p>被依赖的类出现在类中的成员变量，方法的参数列表，方法的返回值，或者是方法的局部变量都是依赖关系  </p>
+<h3 id="泛化关系"><a href="#泛化关系" class="headerlink" title="泛化关系"></a>泛化关系</h3><p>泛化关系实际上就是继承关系，是依赖关系的特例。  </p>
+<pre><code>public abstract class Animal{
+    public void breathe(){
+    }
+}  
+public class Cat extends Animal{
+    public void breathe(){
+        System.out.println(&quot; &quot;);
+    }
+}  </code></pre><p>类图如下：  </p>
+<p><img src="/images/UML%E7%B1%BB%E5%9B%BE%E5%AD%A6%E4%B9%A0/ph2.png" alt="">      </p>
+<h3 id="实现关系"><a href="#实现关系" class="headerlink" title="实现关系"></a>实现关系</h3><p>泛化关系实际上就是A类实现B接口，是依赖关系的特例。  </p>
+<pre><code>public interface Animal{
+    public void breathe(){
+    }
+}  
+public class Cat extends Animal{
+    public void breathe(){
+        System.out.println(&quot; &quot;);
+    }
+}</code></pre><p>类图如下：  </p>
+<p><img src="/images/UML%E7%B1%BB%E5%9B%BE%E5%AD%A6%E4%B9%A0/ph3.png" alt="">    </p>
+<h3 id="关联关系"><a href="#关联关系" class="headerlink" title="关联关系"></a>关联关系</h3><p>他体现的是两个类、或者类与接口之间语义级别的一种强依赖关系，这种关系比依赖更强、不存在依赖关系的偶然性、关系也不是临时性的，一般是长期性的，而且双方的关系一般是平等的、关联可以是单向、双向的；表现在代码层面，为被关联类B以类属性的形式出现在关联类A中，也可能是关联类A引用了一个类型为被关联类B的全局变量。<br>例如人和身份证号<br>单向关系,只有一个类含有另一个类的属性 </p>
+<pre><code>public class person{
+    private IDCard card;
+}  
+public class IDCard{
+
+}</code></pre><p><img src="/images/UML%E7%B1%BB%E5%9B%BE%E5%AD%A6%E4%B9%A0/ph4.png" alt="">   </p>
+<p>双向关系,两个类互相含有另一个类的属性  </p>
+<pre><code>public class person{
+    private IDCard card;
+}  
+public class IDCard{
+    private Person person;
+}</code></pre><p><img src="/images/UML%E7%B1%BB%E5%9B%BE%E5%AD%A6%E4%B9%A0/ph5.png" alt="">   </p>
+<h3 id="聚合关系"><a href="#聚合关系" class="headerlink" title="聚合关系"></a>聚合关系</h3><p>表示的是整体和部分的关系，整体与部分可以分开，聚合关系是关联关系的特列。  </p>
+<p>例如：一台电脑由键盘，显示器，鼠标等组成；组成电脑的各个配件是可以从电脑上分离出来的，使用带空心菱形的实线来表示  </p>
+<pre><code>public class Computer{
+    private Mouse mouse;
+    private Monitor monitor;
+}  
+public class Mouse{
+
+}  
+public class Monitor{
+
+}</code></pre><p>类图如下：  </p>
+<p><img src="/images/UML%E7%B1%BB%E5%9B%BE%E5%AD%A6%E4%B9%A0/ph6.png" alt="">   </p>
+<h3 id="组合关系"><a href="#组合关系" class="headerlink" title="组合关系"></a>组合关系</h3><p>如果Mouse，Monitor和Computer是不可分离的，那就是组合关系  </p>
+<pre><code>public class Computer{
+    private Mouse mouse = new Mouse();
+    private Monitor monitor = new Monitor();
+}  
+public class Mouse{
+
+}  
+public class Monitor{
+
+}</code></pre><p>只要Computer类一创建，对应的Mouse和Monitor就也被创建，他们是不可以被分离的。<br>类图如下：  </p>
+<p><img src="/images/UML%E7%B1%BB%E5%9B%BE%E5%AD%A6%E4%B9%A0/ph7.png" alt="">   </p>
 
       
 
@@ -273,7 +344,7 @@ private ISomeService someService;      </code></pre><p>这句代码还是很常�
 			<ul><li><strong>联系QQ：      </strong><a>&nbsp;&nbsp;1345212630</a></li></ul>
 			<ul><li><strong>联系邮箱： </strong><a>is_9366@163.com</a></li></ul>
 			<ul><li><strong>本文链接：</strong>
-			 <a href="https://qingqingxihuanlili.github.io/2020/05/20/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%85%AD%E5%A4%A7%E5%8E%9F%E5%88%99/" target="_blank" rel="noopener">https://qingqingxihuanlili.github.io/2020/05/20/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%85%AD%E5%A4%A7%E5%8E%9F%E5%88%99/</a>
+			 <a href="https://qingqingxihuanlili.github.io/2020/05/25/UML%E7%B1%BB%E5%9B%BE%E5%AD%A6%E4%B9%A0/" target="_blank" rel="noopener">https://qingqingxihuanlili.github.io/2020/05/25/UML%E7%B1%BB%E5%9B%BE%E5%AD%A6%E4%B9%A0/</a>
 			</li></ul>
 			<ul><li><strong>版权声明：</strong>
 			本作品采用
@@ -295,7 +366,7 @@ private ISomeService someService;      </code></pre><p>这句代码还是很常�
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">六大设计原则</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">UML类图</a>
         		</li>
       		
 		</ul>
@@ -363,7 +434,7 @@ private ISomeService someService;      </code></pre><p>这句代码还是很常�
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://qingqingxihuanlili.github.io/2020/05/20/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%85%AD%E5%A4%A7%E5%8E%9F%E5%88%99/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://qingqingxihuanlili.github.io/2020/05/25/UML%E7%B1%BB%E5%9B%BE%E5%AD%A6%E4%B9%A0/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -377,18 +448,9 @@ private ISomeService someService;      </code></pre><p>这句代码还是很常�
   
 <nav id="article-nav">
   
-    <a href="/2020/05/23/CSS%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0%EF%BC%8C%E8%A1%8C%E5%86%85%E5%85%83%E7%B4%A0%EF%BC%8C%E7%BD%AE%E6%8D%A2%E5%85%83%E7%B4%A0/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          CSS块级元素，行内元素，置换元素
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/01/08/JDK,JRE,JVM%E4%B8%89%E8%80%85%E7%9A%84%E5%8C%BA%E5%88%AB/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">JDK、JRE、JVM三者的区别</div>
+    <a href="/2020/05/23/CSS%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0%EF%BC%8C%E8%A1%8C%E5%86%85%E5%85%83%E7%B4%A0%EF%BC%8C%E7%BD%AE%E6%8D%A2%E5%85%83%E7%B4%A0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">CSS块级元素，行内元素，置换元素</div>
       <i class="icon-circle-right"></i>
     </a>
   
