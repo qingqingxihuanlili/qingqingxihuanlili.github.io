@@ -6,26 +6,29 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://qingqingxihuanlili.github.io">
-  <title>IntelliJ IDEA下载安装 | qingqing αρέσει η lili</title>
+  <title>工厂模式 | qingqing αρέσει η lili</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="下载地址：https:&#x2F;&#x2F;www.jetbrains.com&#x2F;idea&#x2F;download&#x2F;#section&#x3D;windows记得选择旗舰版UItimate,因为社区版缺少了很多功能。当然下载安装完成之后我们还要对旗舰版进行破解。">
+  <meta name="description" content="工厂模式介绍定义：在基类中定义创建对象的一个接口，让子类决定实例化哪个类。工厂方法让一个类的实例化延迟到子类中进行   翻译过来就是把对象的创建和使用的过程分开，工厂模式主要是为创建对象提供过渡接口，以便于将创建对象的具体过程屏蔽隔离起来，达到提高灵活性的目的   创建一个对象常常需要复杂的过程，包括决定创建哪个对象、管理对象的生命周期，以及管理特定对象的创建和销毁，所以不适合包含在一个复合对象中">
 <meta property="og:type" content="article">
-<meta property="og:title" content="IntelliJ IDEA下载安装">
-<meta property="og:url" content="https://qingqingxihuanlili.github.io/2020/01/07/IntelliJ%20IDEA%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85/index.html">
+<meta property="og:title" content="工厂模式">
+<meta property="og:url" content="https://qingqingxihuanlili.github.io/2020/01/16/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/index.html">
 <meta property="og:site_name" content="qingqing αρέσει η lili">
-<meta property="og:description" content="下载地址：https:&#x2F;&#x2F;www.jetbrains.com&#x2F;idea&#x2F;download&#x2F;#section&#x3D;windows记得选择旗舰版UItimate,因为社区版缺少了很多功能。当然下载安装完成之后我们还要对旗舰版进行破解。">
+<meta property="og:description" content="工厂模式介绍定义：在基类中定义创建对象的一个接口，让子类决定实例化哪个类。工厂方法让一个类的实例化延迟到子类中进行   翻译过来就是把对象的创建和使用的过程分开，工厂模式主要是为创建对象提供过渡接口，以便于将创建对象的具体过程屏蔽隔离起来，达到提高灵活性的目的   创建一个对象常常需要复杂的过程，包括决定创建哪个对象、管理对象的生命周期，以及管理特定对象的创建和销毁，所以不适合包含在一个复合对象中">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://qingqingxihuanlili.github.io/images/IntelliJIDEA%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85/%E5%AE%89%E8%A3%851.png">
-<meta property="og:image" content="https://qingqingxihuanlili.github.io/images/IntelliJIDEA%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85/%E5%AE%89%E8%A3%852.png">
-<meta property="og:image" content="https://qingqingxihuanlili.github.io/images/IntelliJIDEA%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85/%E9%A1%B5%E9%9D%A21.png">
-<meta property="og:image" content="https://qingqingxihuanlili.github.io/images/IntelliJIDEA%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85/%E9%A1%B5%E9%9D%A22.png">
-<meta property="article:published_time" content="2020-01-07T01:08:07.000Z">
-<meta property="article:modified_time" content="2020-01-07T07:36:29.024Z">
+<meta property="og:image" content="https://qingqingxihuanlili.github.io/images/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/ph1.png">
+<meta property="og:image" content="https://qingqingxihuanlili.github.io/images/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/ph2.png">
+<meta property="og:image" content="https://qingqingxihuanlili.github.io/images/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/ph3.png">
+<meta property="og:image" content="https://qingqingxihuanlili.github.io/images/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/ph4.png">
+<meta property="og:image" content="https://qingqingxihuanlili.github.io/images/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/ph5.png">
+<meta property="og:image" content="https://qingqingxihuanlili.github.io/images/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/ph6.png">
+<meta property="og:image" content="https://qingqingxihuanlili.github.io/images/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/ph7.png">
+<meta property="article:published_time" content="2020-01-16T07:08:22.000Z">
+<meta property="article:modified_time" content="2020-05-27T08:29:53.760Z">
 <meta property="article:author" content="青青">
-<meta property="article:tag" content="jetbrains">
-<meta property="article:tag" content="idea">
+<meta property="article:tag" content="设计模式">
+<meta property="article:tag" content="工厂模式">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://qingqingxihuanlili.github.io/images/IntelliJIDEA%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85/%E5%AE%89%E8%A3%851.png">
+<meta name="twitter:image" content="https://qingqingxihuanlili.github.io/images/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/ph1.png">
   
     <link rel="alternative" href="/atom.xml" title="qingqing αρέσει η lili" type="application/atom+xml">
   
@@ -173,39 +176,75 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-IntelliJ IDEA下载安装" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-工厂模式" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      IntelliJ IDEA下载安装
+      工厂模式
     </h1>
   
 
         
-        <a href="/2020/01/07/IntelliJ%20IDEA%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85/" class="archive-article-date">
-  	<time datetime="2020-01-07T01:08:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-07</time>
+        <a href="/2020/01/16/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
+  	<time datetime="2020-01-16T07:08:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-16</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h1><p>地址：<a href="https://www.jetbrains.com/idea/download/#section=windows" target="_blank" rel="noopener">https://www.jetbrains.com/idea/download/#section=windows</a><br>记得选择旗舰版UItimate,因为社区版缺少了很多功能。当然下载安装完成之后我们还要对旗舰版进行破解。</p>
+        <h1 id="工厂模式介绍"><a href="#工厂模式介绍" class="headerlink" title="工厂模式介绍"></a>工厂模式介绍</h1><p>定义：在基类中定义创建对象的一个接口，让子类决定实例化哪个类。工厂方法让一个类的实例化延迟到子类中进行  </p>
+<p>翻译过来就是把对象的创建和使用的过程分开，工厂模式主要是为创建对象提供过渡接口，以便于将创建对象的具体过程屏蔽隔离起来，达到提高灵活性的目的  </p>
+<p>创建一个对象常常需要复杂的过程，包括决定创建哪个对象、管理对象的生命周期，以及管理特定对象的创建和销毁，所以不适合包含在一个复合对象中。创建对象可能会导致大量的重复代码，可能会需要复合对象访问不到的信息，也可能提供不了足够级别的抽象，还可能并不是复合对象概念的一部分。工厂方法模式通过定义一个单独的创建对象的方法来解决这些问题。由子类实现这个方法来创建具体类型的对象。   </p>
 <a id="more"></a>
 
-<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>下载完成之后，直接双击.exe运行文件，点击Next则选择的是默认的一个安装路径；或者点击“Browse”,自己设置路径，之后点击“Next”;   </p>
-<p><img src="/images/IntelliJIDEA%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85/%E5%AE%89%E8%A3%851.png" alt="">    </p>
-<p>如果是64位记得勾选    </p>
-<p><img src="/images/IntelliJIDEA%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85/%E5%AE%89%E8%A3%852.png" alt="">    </p>
-<p>之后点击安装就可以了</p>
-<h1 id="破解"><a href="#破解" class="headerlink" title="破解"></a>破解</h1><p>不破解的话会有30天的免费试用，破解的话我只试过用激活码破解，但是现在激活码也比较难找了。  </p>
-<p><img src="/images/IntelliJIDEA%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85/%E9%A1%B5%E9%9D%A21.png" alt="">   </p>
-<p>破解完成之后就可以进入我们开发工具了    </p>
-<p><img src="/images/IntelliJIDEA%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85/%E9%A1%B5%E9%9D%A22.png" alt="">   </p>
-<p>至此IntelliJ IDEA的安装就算完成了。记得去设置里面调自己喜欢的风格，而且不建议汉化！</p>
+<h1 id="简单工厂模式"><a href="#简单工厂模式" class="headerlink" title="简单工厂模式"></a>简单工厂模式</h1><p>简单工厂模式是属于创建型模式，是工厂模式的一种。简单工厂模式是由一个工厂对象决定创建出哪一种产品类的实例。<br>它定义了一个创建对象的类，由这个类来封装实例化对象的行为，在软件开发中，当我们会用到大量创建某种、某类或者某批对象时，就会用到工厂模式。<br>简单工厂模式类图： </p>
+<p><img src="/images/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/ph1.png" alt="">   </p>
+<p>类图的结构：  </p>
+<ol>
+<li>Factory(工厂):核心部分，负责实现创建所有产品的内部逻辑，工厂类可以被外界直接调用，创建所需对象。  </li>
+<li>Product(抽象类产品)：工厂类所创建的所有对象的父类，封装了产品对象的公共方法，所有的具体产品为其子类对象。  </li>
+<li>ConcreteProduct(具体产品)：简单工厂模式的创建目标，所有被创建的对象都是某个具体类的实例。它要实现抽象产品中声明的抽象方法(有关抽象类)。  </li>
+</ol>
+<pre><code>class Program{
+
+    static void Main(string[] args)
+     {
+        Product product;
+        product = Factory.produce(&quot;A&quot;);//工厂类创建对象
+     }    
+}</code></pre><p>通过这种方式，我们把对象的创建和使用的过程分开了。  </p>
+<h3 id="简单工厂模式的缺点"><a href="#简单工厂模式的缺点" class="headerlink" title="简单工厂模式的缺点"></a>简单工厂模式的缺点</h3><p>在简单工厂模式中，一个工厂类负责所有产品对象的创建，这个工厂类的职责大大增加，可能客户端对于某些产品的创建方式会有不同的要求，这样的话，就要不断的修改工厂类，增加相应的判断逻辑，不利于后期的代码维护。也违背了开闭原则。 而且一旦异常，整个系统将受影响。<br>另外，由于简单工厂模式使用静态方法创建，这就导致静态方法无法被继承。<br>所以，简单工厂模式适用于创建的对象比较少或简单的情况。  </p>
+<h1 id="工厂方法模式"><a href="#工厂方法模式" class="headerlink" title="工厂方法模式"></a>工厂方法模式</h1><p>为了解决简单工厂出现问题，又出现了一种工厂方法设计模式。  </p>
+<p>将类的实例化（具体产品的创建）延迟到工厂类的子类（具体工厂）中完成，即由子类来决定应该实例化（创建）哪一个类。  </p>
+<p>以前我们之间使用工厂类创建对象，而现在我们使用工厂类的子类来创建对象。  </p>
+<p>工厂方法模式类图：  </p>
+<p><img src="/images/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/ph2.png" alt="">  </p>
+<p>类图的结构与简单工厂的区别就是，细化了工厂类，做到了各司其职。<br>更符合开闭原则，新增一种产品时，只需要增加相应的具体产品类和相应的工厂子类即可。<br>更符合单一职责原则，每个具体工厂类只负责创建相应的产品。<br>不使用静态工厂方法，可以形成基于继承的等级结构。<br>工厂模式可以说是简单工厂模式的进一步抽象和拓展，在保留了简单工厂的封装优点的同时，让扩展变得简单，让继承变得可行，增加了多态性的体现。  </p>
+<h3 id="工厂方法模式的缺点"><a href="#工厂方法模式的缺点" class="headerlink" title="工厂方法模式的缺点"></a>工厂方法模式的缺点</h3><p>每次我们添加新产品，除了增加新产品类外，还要多提供与之对应的具体工厂类，系统类的个数将成对增加，在一定程度上增加了系统的复杂度；同时，有更多的类需要编译和运行，会给系统带来一些额外的开销。<br>虽然保证了工厂方法内的对修改关闭，但对于使用工厂方法的类，如果要更换另外一种产品，仍然需要修改实例化的具体工厂类。  </p>
+<h1 id="抽象工厂模式"><a href="#抽象工厂模式" class="headerlink" title="抽象工厂模式"></a>抽象工厂模式</h1><p>在工厂方法模式中具体工厂负责生产具体的产品，每一个具体工厂对应一种具体产品，工厂方法也具有唯一性，一般情况下，一个具体工厂中只有一个工厂方法或者一组重载的工厂方法。但是有时候我们需要一个工厂可以提供多个产品对象，而不是单一的产品对象。  </p>
+<p>毕竟一个工厂生产一个产品也太慢了。  </p>
+<p>抽象工厂模式：提供一个创建一系列相关或相互依赖对象的接口，而无须指定它们具体的类。抽象工厂模式又称为Kit模式，属于对象创建型模式。  </p>
+<p>举例就是，工厂方法模式是一个汽车工厂只能生产轿车，或者货车，或者客车其中的一种，一个工厂类负责一种产品<br>抽象工厂就是，每个汽车工厂可能要同时生产轿车，货车，客车，它里面有创建轿车，货车和客车的方法。  </p>
+<p>抽象工厂模式类图：   </p>
+<p><img src="/images/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/ph3.png" alt="">  </p>
+<p>与工厂方法模式的区别很明显：工厂方法模式的具体工厂类只能创建一个具体产品类的实例，而抽象工厂模式可以创建多个。  </p>
+<h3 id="抽象工厂模式的缺点"><a href="#抽象工厂模式的缺点" class="headerlink" title="抽象工厂模式的缺点"></a>抽象工厂模式的缺点</h3><p>在添加新的产品对象时，难以扩展抽象工厂来生产新种类的产品，这是因为在抽象工厂角色中规定了所有可能被创建的产品集合，要支持新种类的产品就意味着要对该接口进行扩展，而这将涉及到对抽象工厂角色及其所有子类的修改，显然会带来较大的不便。  </p>
+<p>加一个新产品要改好多类。。。  </p>
+<h1 id="JDK中的Calendar"><a href="#JDK中的Calendar" class="headerlink" title="JDK中的Calendar"></a>JDK中的Calendar</h1><p>Calendar是java util包下的一个工具类，提供了很方便的不同日期格式的处理。它为特定瞬间与一组诸如 YEAR、MONTH、DAY_OF_MONTH、HOUR 等日历字段之间的转换提供了一些方法，并为操作日历字段（例如获得下星期的日期）提供了一些方法。    </p>
+<p>这里使用了简单工厂模式</p>
+<p>源码分析  </p>
+<p><img src="/images/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/ph4.png" alt="">   </p>
+<p>我们看到生成Calendar使用了一个静态方法getInstance而不是new  </p>
+<p><img src="/images/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/ph5.png" alt="">   </p>
+<p>在这里我们发现使用了一个createCalendar方法根据时区TimeZone和地区Locale来返回一个实例对象。  </p>
+<p><img src="/images/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/ph6.png" alt="">  </p>
+<p>这个方法他先根据地区去获得一个CalendarProvider这个对象实例provider,如果provider为空，就创建一个Calendar实例。  </p>
+<p><img src="/images/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/ph7.png" alt="">  </p>
+<p>会根据caltype的值来创建Calendar实例，和简单工厂一样，我们给他一个参数，工厂返回一个实例</p>
 
       
 
@@ -261,7 +300,7 @@
 			<ul><li><strong>联系QQ：      </strong><a>&nbsp;&nbsp;1345212630</a></li></ul>
 			<ul><li><strong>联系邮箱： </strong><a>is_9366@163.com</a></li></ul>
 			<ul><li><strong>本文链接：</strong>
-			 <a href="https://qingqingxihuanlili.github.io/2020/01/07/IntelliJ%20IDEA%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85/" target="_blank" rel="noopener">https://qingqingxihuanlili.github.io/2020/01/07/IntelliJ%20IDEA%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85/</a>
+			 <a href="https://qingqingxihuanlili.github.io/2020/01/16/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/" target="_blank" rel="noopener">https://qingqingxihuanlili.github.io/2020/01/16/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/</a>
 			</li></ul>
 			<ul><li><strong>版权声明：</strong>
 			本作品采用
@@ -279,11 +318,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">jetbrains</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">idea</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">工厂模式</a>
         		</li>
       		
 		</ul>
@@ -296,7 +335,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/软件安装//" class="article-tag-list-link color5">软件安装</a>
+        			<a href="/categories/学习笔记//" class="article-tag-list-link color5">学习笔记</a>
         		</li>
       		
 		</ul>
@@ -351,7 +390,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://qingqingxihuanlili.github.io/2020/01/07/IntelliJ%20IDEA%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://qingqingxihuanlili.github.io/2020/01/16/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -365,18 +404,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/01/08/idea%E9%85%8D%E7%BD%AEjdk-tomcat/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          idea配置jdk和tomcat
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/01/07/WebStorm%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">WebStorm下载安装</div>
+    <a href="/2020/01/15/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">单例模式</div>
       <i class="icon-circle-right"></i>
     </a>
   
