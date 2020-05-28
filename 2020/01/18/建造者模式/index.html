@@ -6,29 +6,26 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://qingqingxihuanlili.github.io">
-  <title>工厂模式 | qingqing αρέσει η lili</title>
+  <title>建造者模式 | qingqing αρέσει η lili</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="工厂模式介绍定义：在基类中定义创建对象的一个接口，让子类决定实例化哪个类。工厂方法让一个类的实例化延迟到子类中进行   翻译过来就是把对象的创建和使用的过程分开，工厂模式主要是为创建对象提供过渡接口，以便于将创建对象的具体过程屏蔽隔离起来，达到提高灵活性的目的   创建一个对象常常需要复杂的过程，包括决定创建哪个对象、管理对象的生命周期，以及管理特定对象的创建和销毁，所以不适合包含在一个复合对象中">
+  <meta name="description" content="建造者模式介绍建造者模式的定义：指将一个复杂对象的构造与它的表示分离，使同样的构建过程可以创建不同的表示，这样的设计模式被称为建造者模式。它是将一个复杂的对象建造过程抽象出来，然后一步一步构建而成。它将变与不变相分离，即产品的组成部分是不变的，但每一部分是可以灵活选择的。    所以建造者模式可以把产品和产品建造的过程进行解耦。  例如计算机是由 CPU、主板、内存、硬盘、显卡、机箱、显示器、键盘">
 <meta property="og:type" content="article">
-<meta property="og:title" content="工厂模式">
-<meta property="og:url" content="https://qingqingxihuanlili.github.io/2020/01/16/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/index.html">
+<meta property="og:title" content="建造者模式">
+<meta property="og:url" content="https://qingqingxihuanlili.github.io/2020/01/18/%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/index.html">
 <meta property="og:site_name" content="qingqing αρέσει η lili">
-<meta property="og:description" content="工厂模式介绍定义：在基类中定义创建对象的一个接口，让子类决定实例化哪个类。工厂方法让一个类的实例化延迟到子类中进行   翻译过来就是把对象的创建和使用的过程分开，工厂模式主要是为创建对象提供过渡接口，以便于将创建对象的具体过程屏蔽隔离起来，达到提高灵活性的目的   创建一个对象常常需要复杂的过程，包括决定创建哪个对象、管理对象的生命周期，以及管理特定对象的创建和销毁，所以不适合包含在一个复合对象中">
+<meta property="og:description" content="建造者模式介绍建造者模式的定义：指将一个复杂对象的构造与它的表示分离，使同样的构建过程可以创建不同的表示，这样的设计模式被称为建造者模式。它是将一个复杂的对象建造过程抽象出来，然后一步一步构建而成。它将变与不变相分离，即产品的组成部分是不变的，但每一部分是可以灵活选择的。    所以建造者模式可以把产品和产品建造的过程进行解耦。  例如计算机是由 CPU、主板、内存、硬盘、显卡、机箱、显示器、键盘">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://qingqingxihuanlili.github.io/images/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/ph1.png">
-<meta property="og:image" content="https://qingqingxihuanlili.github.io/images/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/ph2.png">
-<meta property="og:image" content="https://qingqingxihuanlili.github.io/images/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/ph3.png">
-<meta property="og:image" content="https://qingqingxihuanlili.github.io/images/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/ph4.png">
-<meta property="og:image" content="https://qingqingxihuanlili.github.io/images/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/ph5.png">
-<meta property="og:image" content="https://qingqingxihuanlili.github.io/images/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/ph6.png">
-<meta property="og:image" content="https://qingqingxihuanlili.github.io/images/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/ph7.png">
-<meta property="article:published_time" content="2020-01-16T07:08:22.000Z">
-<meta property="article:modified_time" content="2020-05-28T07:59:24.938Z">
+<meta property="og:image" content="https://qingqingxihuanlili.github.io/images/%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/ph1.png">
+<meta property="og:image" content="https://qingqingxihuanlili.github.io/images/%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/ph2.png">
+<meta property="og:image" content="https://qingqingxihuanlili.github.io/images/%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/ph3.png">
+<meta property="og:image" content="https://qingqingxihuanlili.github.io/images/%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/ph4.png">
+<meta property="article:published_time" content="2020-01-18T10:35:42.000Z">
+<meta property="article:modified_time" content="2020-05-28T08:24:46.361Z">
 <meta property="article:author" content="青青">
 <meta property="article:tag" content="设计模式">
-<meta property="article:tag" content="工厂模式">
+<meta property="article:tag" content="建造者模式">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://qingqingxihuanlili.github.io/images/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/ph1.png">
+<meta name="twitter:image" content="https://qingqingxihuanlili.github.io/images/%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/ph1.png">
   
     <link rel="alternative" href="/atom.xml" title="qingqing αρέσει η lili" type="application/atom+xml">
   
@@ -176,75 +173,179 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-工厂模式" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-建造者模式" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      工厂模式
+      建造者模式
     </h1>
   
 
         
-        <a href="/2020/01/16/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-01-16T07:08:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-16</time>
+        <a href="/2020/01/18/%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
+  	<time datetime="2020-01-18T10:35:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-18</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="工厂模式介绍"><a href="#工厂模式介绍" class="headerlink" title="工厂模式介绍"></a>工厂模式介绍</h1><p>定义：在基类中定义创建对象的一个接口，让子类决定实例化哪个类。工厂方法让一个类的实例化延迟到子类中进行  </p>
-<p>翻译过来就是把对象的创建和使用的过程分开，工厂模式主要是为创建对象提供过渡接口，以便于将创建对象的具体过程屏蔽隔离起来，达到提高灵活性的目的  </p>
-<p>创建一个对象常常需要复杂的过程，包括决定创建哪个对象、管理对象的生命周期，以及管理特定对象的创建和销毁，所以不适合包含在一个复合对象中。创建对象可能会导致大量的重复代码，可能会需要复合对象访问不到的信息，也可能提供不了足够级别的抽象，还可能并不是复合对象概念的一部分。工厂方法模式通过定义一个单独的创建对象的方法来解决这些问题。由子类实现这个方法来创建具体类型的对象。   </p>
-<a id="more"></a>
+        <h1 id="建造者模式介绍"><a href="#建造者模式介绍" class="headerlink" title="建造者模式介绍"></a>建造者模式介绍</h1><p>建造者模式的定义：指将一个复杂对象的构造与它的表示分离，使同样的构建过程可以创建不同的表示，这样的设计模式被称为建造者模式。<br>它是将一个复杂的对象建造过程抽象出来，然后一步一步构建而成。它将变与不变相分离，即产品的组成部分是不变的，但每一部分是可以灵活选择的。   </p>
+<p>所以建造者模式可以把产品和产品建造的过程进行解耦。 </p>
+<p>例如计算机是由 CPU、主板、内存、硬盘、显卡、机箱、显示器、键盘、鼠标等多个部件组装而成的，各个部件可以灵活选择，但其创建步骤都大同小异。这类产品的创建无法用前面介绍的工厂模式描述，只有建造者模式可以很好地描述该类产品的创建。  </p>
+<a id="more"></a>   
 
-<h1 id="简单工厂模式"><a href="#简单工厂模式" class="headerlink" title="简单工厂模式"></a>简单工厂模式</h1><p>简单工厂模式是属于创建型模式，是工厂模式的一种。简单工厂模式是由一个工厂对象决定创建出哪一种产品类的实例。<br>它定义了一个创建对象的类，由这个类来封装实例化对象的行为，在软件开发中，当我们会用到大量创建某种、某类或者某批对象时，就会用到工厂模式。<br>简单工厂模式类图： </p>
-<p><img src="/images/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/ph1.png" alt="">   </p>
-<p>类图的结构：  </p>
+<h1 id="类图"><a href="#类图" class="headerlink" title="类图"></a>类图</h1><p><img src="/images/%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/ph1.png" alt=""></p>
+<p>这种形式涉及到四个角色  </p>
 <ol>
-<li>Factory(工厂):核心部分，负责实现创建所有产品的内部逻辑，工厂类可以被外界直接调用，创建所需对象。  </li>
-<li>Product(抽象类产品)：工厂类所创建的所有对象的父类，封装了产品对象的公共方法，所有的具体产品为其子类对象。  </li>
-<li>ConcreteProduct(具体产品)：简单工厂模式的创建目标，所有被创建的对象都是某个具体类的实例。它要实现抽象产品中声明的抽象方法(有关抽象类)。  </li>
+<li>Product(产品角色)：一个具体的产品对象    </li>
+<li>Builder(抽象建造者)：创建一个Product对象的各个部件指定的接口，定义了一个建造产品的流程，但是建造的具体细节它不需要考虑。  </li>
+<li>ConcreteBuilder(具体建造者)：实现了接口，构建和装配各个部件。</li>
+<li>Director（指挥者):构建一个使用Builder接口的对象，主要用于创建一个复杂的对象。主要用来隔离产品和产品的生产过程，并且负责控制产品对象的生产过程。 </li>
 </ol>
-<pre><code>class Program{
+<p>很明显这有一个缓冲过程，一个Product的建造过程，不再是一步一步直接创建了，而是把这些方法封装在一个接口Builder里面了，具体建造者ConcreteBuilder实际上要建造的产品类型（类似于汽车的建造方式大同小异，但是还是有细微的区别，汽车，公交车，赛车等等），具体建造者就是继承了封装的抽象类，然后具体实现了建造的代码（每个具体建造者实现的结果可能不同），然后我们使用Director一步一步的建造产品。这和我们直接创建产品还是有很大区别的，毕竟多了一个缓冲过程。   </p>
+<h1 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h1><h3 id="产品类-定义房子的基本属性"><a href="#产品类-定义房子的基本属性" class="headerlink" title="产品类 定义房子的基本属性"></a>产品类 定义房子的基本属性</h3><pre><code>//产品-&gt;Product
+public class House {
+    private String baise;  //地基
+    private String wall;   //墙壁
+    private String roofed; //封顶
 
-    static void Main(string[] args)
-     {
-        Product product;
-        product = Factory.produce(&quot;A&quot;);//工厂类创建对象
-     }    
-}</code></pre><p>通过这种方式，我们把对象的创建和使用的过程分开了。  </p>
-<h3 id="简单工厂模式的缺点"><a href="#简单工厂模式的缺点" class="headerlink" title="简单工厂模式的缺点"></a>简单工厂模式的缺点</h3><p>在简单工厂模式中，一个工厂类负责所有产品对象的创建，这个工厂类的职责大大增加，可能客户端对于某些产品的创建方式会有不同的要求，这样的话，就要不断的修改工厂类，增加相应的判断逻辑，不利于后期的代码维护。也违背了开闭原则。 而且一旦异常，整个系统将受影响。<br>另外，由于简单工厂模式使用静态方法创建，这就导致静态方法无法被继承。<br>所以，简单工厂模式适用于创建的对象比较少或简单的情况。  </p>
-<h1 id="工厂方法模式"><a href="#工厂方法模式" class="headerlink" title="工厂方法模式"></a>工厂方法模式</h1><p>为了解决简单工厂出现问题，又出现了一种工厂方法设计模式。  </p>
-<p>将类的实例化（具体产品的创建）延迟到工厂类的子类（具体工厂）中完成，即由子类来决定应该实例化（创建）哪一个类。  </p>
-<p>以前我们之间使用工厂类创建对象，而现在我们使用工厂类的子类来创建对象（加了一层缓冲层，让子类继承工厂类，让子类创建对象）。  </p>
-<p>工厂方法模式类图：  </p>
-<p><img src="/images/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/ph2.png" alt="">  </p>
-<p>类图的结构与简单工厂的区别就是，细化了工厂类，做到了各司其职。<br>更符合开闭原则，新增一种产品时，只需要增加相应的具体产品类和相应的工厂子类即可。<br>更符合单一职责原则，每个具体工厂类只负责创建相应的产品。<br>不使用静态工厂方法，可以形成基于继承的等级结构。<br>工厂模式可以说是简单工厂模式的进一步抽象和拓展，在保留了简单工厂的封装优点的同时，让扩展变得简单，让继承变得可行，增加了多态性的体现。  </p>
-<h3 id="工厂方法模式的缺点"><a href="#工厂方法模式的缺点" class="headerlink" title="工厂方法模式的缺点"></a>工厂方法模式的缺点</h3><p>每次我们添加新产品，除了增加新产品类外，还要多提供与之对应的具体工厂类，系统类的个数将成对增加，在一定程度上增加了系统的复杂度；同时，有更多的类需要编译和运行，会给系统带来一些额外的开销。<br>虽然保证了工厂方法内的对修改关闭，但对于使用工厂方法的类，如果要更换另外一种产品，仍然需要修改实例化的具体工厂类。  </p>
-<h1 id="抽象工厂模式"><a href="#抽象工厂模式" class="headerlink" title="抽象工厂模式"></a>抽象工厂模式</h1><p>在工厂方法模式中具体工厂负责生产具体的产品，每一个具体工厂对应一种具体产品，工厂方法也具有唯一性，一般情况下，一个具体工厂中只有一个工厂方法或者一组重载的工厂方法。但是有时候我们需要一个工厂可以提供多个产品对象，而不是单一的产品对象。  </p>
-<p>毕竟一个工厂生产一个产品也太慢了。  </p>
-<p>抽象工厂模式：提供一个创建一系列相关或相互依赖对象的接口，而无须指定它们具体的类。抽象工厂模式又称为Kit模式，属于对象创建型模式。  </p>
-<p>举例就是，工厂方法模式是一个汽车工厂只能生产轿车，或者货车，或者客车其中的一种，一个工厂类负责一种产品<br>抽象工厂就是，每个汽车工厂可能要同时生产轿车，货车，客车，它里面有创建轿车，货车和客车的方法。  </p>
-<p>抽象工厂模式类图：   </p>
-<p><img src="/images/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/ph3.png" alt="">  </p>
-<p>与工厂方法模式的区别很明显：工厂方法模式的具体工厂类只能创建一个具体产品类的实例，而抽象工厂模式可以创建多个。  </p>
-<h3 id="抽象工厂模式的缺点"><a href="#抽象工厂模式的缺点" class="headerlink" title="抽象工厂模式的缺点"></a>抽象工厂模式的缺点</h3><p>在添加新的产品对象时，难以扩展抽象工厂来生产新种类的产品，这是因为在抽象工厂角色中规定了所有可能被创建的产品集合，要支持新种类的产品就意味着要对该接口进行扩展，而这将涉及到对抽象工厂角色及其所有子类的修改，显然会带来较大的不便。  </p>
-<p>加一个新产品要改好多类。。。  </p>
-<h1 id="JDK中的Calendar"><a href="#JDK中的Calendar" class="headerlink" title="JDK中的Calendar"></a>JDK中的Calendar</h1><p>Calendar是java util包下的一个工具类，提供了很方便的不同日期格式的处理。它为特定瞬间与一组诸如 YEAR、MONTH、DAY_OF_MONTH、HOUR 等日历字段之间的转换提供了一些方法，并为操作日历字段（例如获得下星期的日期）提供了一些方法。    </p>
-<p>这里使用了简单工厂模式</p>
-<p>源码分析  </p>
-<p><img src="/images/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/ph4.png" alt="">   </p>
-<p>我们看到生成Calendar使用了一个静态方法getInstance而不是new  </p>
-<p><img src="/images/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/ph5.png" alt="">   </p>
-<p>在这里我们发现使用了一个createCalendar方法根据时区TimeZone和地区Locale来返回一个实例对象。  </p>
-<p><img src="/images/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/ph6.png" alt="">  </p>
-<p>这个方法他先根据地区去获得一个CalendarProvider这个对象实例provider,如果provider为空，就创建一个Calendar实例。  </p>
-<p><img src="/images/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/ph7.png" alt="">  </p>
-<p>会根据caltype的值来创建Calendar实例，和简单工厂一样，我们给他一个参数，工厂返回一个实例</p>
+    public String getBaise() {
+        return baise;
+    }
+    public void setBaise(String baise) {
+        this.baise = baise;
+    }
+    public String getWall() {
+        return wall;
+    }
+    public void setWall(String wall) {
+        this.wall = wall;
+    }
+    public String getRoofed() {
+        return roofed;
+    }
+    public void setRoofed(String roofed) {
+        this.roofed = roofed;
+    }
+
+}   </code></pre><h3 id="建造者类-定义房子的建造过程"><a href="#建造者类-定义房子的建造过程" class="headerlink" title="建造者类 定义房子的建造过程"></a>建造者类 定义房子的建造过程</h3><pre><code>// 抽象的建造者
+public abstract class HouseBuilder {
+
+    protected House house = new House();
+
+    //将建造的流程写好, 抽象的方法
+    public abstract void buildBasic();
+    public abstract void buildWalls();
+    public abstract void roofed();
+
+    //建造房子好， 将产品(房子) 返回
+    public House buildHouse() {
+        return house;
+    }
+
+}  </code></pre><h3 id="具体建造者类-实现建造方法，创造出不一样的产品"><a href="#具体建造者类-实现建造方法，创造出不一样的产品" class="headerlink" title="具体建造者类 实现建造方法，创造出不一样的产品"></a>具体建造者类 实现建造方法，创造出不一样的产品</h3><p>高楼  </p>
+<pre><code>public class HighBuilding extends HouseBuilder {
+
+    @Override
+    public void buildBasic() {
+        // TODO Auto-generated method stub
+        System.out.println(&quot; 高楼的打地基100米 &quot;);
+    }
+
+    @Override
+    public void buildWalls() {
+        // TODO Auto-generated method stub
+        System.out.println(&quot; 高楼的砌墙20cm &quot;);
+    }
+
+    @Override
+    public void roofed() {
+        // TODO Auto-generated method stub
+        System.out.println(&quot; 高楼的透明屋顶 &quot;);
+    }
+
+}  </code></pre><p>普通房子  </p>
+<pre><code>public class CommonHouse extends HouseBuilder {
+
+    @Override
+    public void buildBasic() {
+        // TODO Auto-generated method stub
+        System.out.println(&quot; 普通房子打地基5米 &quot;);
+    }
+
+    @Override
+    public void buildWalls() {
+        // TODO Auto-generated method stub
+        System.out.println(&quot; 普通房子砌墙10cm &quot;);
+    }
+
+    @Override
+    public void roofed() {
+        // TODO Auto-generated method stub
+        System.out.println(&quot; 普通房子屋顶 &quot;);
+    }
+
+}  </code></pre><h3 id="指挥者-执行创建产品的方法，想生产什么产品就实例化什么对象"><a href="#指挥者-执行创建产品的方法，想生产什么产品就实例化什么对象" class="headerlink" title="指挥者 执行创建产品的方法，想生产什么产品就实例化什么对象"></a>指挥者 执行创建产品的方法，想生产什么产品就实例化什么对象</h3><pre><code>//指挥者，这里去指定制作流程，返回产品
+public class HouseDirector {
+
+    HouseBuilder houseBuilder = null;
+
+    //构造器传入 houseBuilder
+    public HouseDirector(HouseBuilder houseBuilder) {
+        this.houseBuilder = houseBuilder;
+    }
+
+    //通过setter 传入 houseBuilder
+    public void setHouseBuilder(HouseBuilder houseBuilder) {
+        this.houseBuilder = houseBuilder;
+    }
+
+    //如何处理建造房子的流程，交给指挥者
+    public House constructHouse() {
+        houseBuilder.buildBasic();
+        houseBuilder.buildWalls();
+        houseBuilder.roofed();
+        return houseBuilder.buildHouse();
+    }
+
+
+}  </code></pre><h3 id="测试用例"><a href="#测试用例" class="headerlink" title="测试用例"></a>测试用例</h3><pre><code>public class Client {
+    public static void main(String[] args) {
+
+        //盖普通房子
+        CommonHouse commonHouse = new CommonHouse();
+        //准备创建房子的指挥者
+        HouseDirector houseDirector = new HouseDirector(commonHouse);
+
+        //完成盖房子，返回产品(普通房子)
+        House house = houseDirector.constructHouse();
+
+        //System.out.println(&quot;输出流程&quot;);
+
+        System.out.println(&quot;--------------------------&quot;);
+        //盖高楼
+        HighBuilding highBuilding = new HighBuilding();
+        //重置建造者
+        houseDirector.setHouseBuilder(highBuilding);
+        //完成盖房子，返回产品(高楼)
+        House house2 = houseDirector.constructHouse();
+
+
+
+    }
+}</code></pre><h1 id="JDK中的StringBuilder"><a href="#JDK中的StringBuilder" class="headerlink" title="JDK中的StringBuilder"></a>JDK中的StringBuilder</h1><p>StringBuilder这个类是用于字符串修改的，并且他是线程安全的，我们经常用到，但其实他就是一个典型的建造者模式。  </p>
+<p><img src="/images/%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/ph2.png" alt="">  </p>
+<p>我们发现StringBuilder是一个final类，它继承一个AbstractStringBuilder这个类，有没有建造者和具体建造者的感觉呢。  </p>
+<p><img src="/images/%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/ph3.png" alt="">   </p>
+<p>但是结果我们发现AbstractStringBuilder这个类当中大部分的方法都已经重写过，实现过了，他并不是建造者接口而是一个具体建造者。<br>与此同时，我们点开了AbstractStringBuilder实现一个叫做Appendable的接口，我们把它打开  </p>
+<p><img src="/images/%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/ph4.png" alt="">   </p>
+<p>也许它才是我们想找的建造者抽象接口<br>Appendable定义了很多append抽象方法，是抽象建造者。  </p>
+<p>AbstractStringBuilder实现了append接口的方法，它是一个具体建造者，特别的是它不能实例化。所以不是特别标准的建造者模式。  </p>
+<p>StringBuilder 它是一个指挥者同时也是具体建造者，只是建造方法的实现是由AbstractStringBuilder完成，但是StringBuilder却继承了AbstractStringBuilder。StringBuilder也有建造方法，而且他也在使用建造方法。</p>
 
       
 
@@ -300,7 +401,7 @@
 			<ul><li><strong>联系QQ：      </strong><a>&nbsp;&nbsp;1345212630</a></li></ul>
 			<ul><li><strong>联系邮箱： </strong><a>is_9366@163.com</a></li></ul>
 			<ul><li><strong>本文链接：</strong>
-			 <a href="https://qingqingxihuanlili.github.io/2020/01/16/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/" target="_blank" rel="noopener">https://qingqingxihuanlili.github.io/2020/01/16/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/</a>
+			 <a href="https://qingqingxihuanlili.github.io/2020/01/18/%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/" target="_blank" rel="noopener">https://qingqingxihuanlili.github.io/2020/01/18/%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/</a>
 			</li></ul>
 			<ul><li><strong>版权声明：</strong>
 			本作品采用
@@ -322,7 +423,7 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">工厂模式</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">建造者模式</a>
         		</li>
       		
 		</ul>
@@ -390,7 +491,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://qingqingxihuanlili.github.io/2020/01/16/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://qingqingxihuanlili.github.io/2020/01/18/%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -404,18 +505,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/01/17/%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          原型模式
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/01/15/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">单例模式</div>
+    <a href="/2020/01/17/%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">原型模式</div>
       <i class="icon-circle-right"></i>
     </a>
   
