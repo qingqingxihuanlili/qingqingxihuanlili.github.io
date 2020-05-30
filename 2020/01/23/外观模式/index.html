@@ -6,15 +6,28 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://qingqingxihuanlili.github.io">
-  <title>Tag: idea | qingqing αρέσει η lili</title>
+  <title>外观模式 | qingqing αρέσει η lili</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="qingqing αρέσει η lili">
-<meta property="og:url" content="https://qingqingxihuanlili.github.io/tags/idea/index.html">
+  <meta name="description" content="外观模式介绍外观模式是一种使用频率非常高的结构型设计模式，它通过引入一个外观角色来简化客户端与子系统之间的交互，为复杂的子系统调用提供一个统一的入口，降低子系统与客户端的耦合度，且客户端调用非常方便。  外观模式又称为门面模式，它是一种对象结构型模式。外观模式是迪米特法则的一种具体实现，通过引入一个新的外观角色可以降低原有系统的复杂度，同时降低客户类与子系统的耦合度。   不使用外观模式的话，我们">
+<meta property="og:type" content="article">
+<meta property="og:title" content="外观模式">
+<meta property="og:url" content="https://qingqingxihuanlili.github.io/2020/01/23/%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F/index.html">
 <meta property="og:site_name" content="qingqing αρέσει η lili">
+<meta property="og:description" content="外观模式介绍外观模式是一种使用频率非常高的结构型设计模式，它通过引入一个外观角色来简化客户端与子系统之间的交互，为复杂的子系统调用提供一个统一的入口，降低子系统与客户端的耦合度，且客户端调用非常方便。  外观模式又称为门面模式，它是一种对象结构型模式。外观模式是迪米特法则的一种具体实现，通过引入一个新的外观角色可以降低原有系统的复杂度，同时降低客户类与子系统的耦合度。   不使用外观模式的话，我们">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://qingqingxihuanlili.github.io/images/%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F/ph1.png">
+<meta property="og:image" content="https://qingqingxihuanlili.github.io/images/%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F/ph2.png">
+<meta property="og:image" content="https://qingqingxihuanlili.github.io/images/%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F/ph3.png">
+<meta property="og:image" content="https://qingqingxihuanlili.github.io/images/%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F/ph4.png">
+<meta property="og:image" content="https://qingqingxihuanlili.github.io/images/%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F/ph5.png">
+<meta property="og:image" content="https://qingqingxihuanlili.github.io/images/%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F/ph6.png">
+<meta property="article:published_time" content="2020-01-23T05:13:51.000Z">
+<meta property="article:modified_time" content="2020-05-30T08:52:20.761Z">
 <meta property="article:author" content="青青">
+<meta property="article:tag" content="设计模式">
+<meta property="article:tag" content="外观模式">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://qingqingxihuanlili.github.io/images/%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F/ph1.png">
   
     <link rel="alternative" href="/atom.xml" title="qingqing αρέσει η lili" type="application/atom+xml">
   
@@ -162,185 +175,317 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-外观模式" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      外观模式
+    </h1>
+  
+
+        
+        <a href="/2020/01/23/%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
+  	<time datetime="2020-01-23T05:13:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-23</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="外观模式介绍"><a href="#外观模式介绍" class="headerlink" title="外观模式介绍"></a>外观模式介绍</h1><p>外观模式是一种使用频率非常高的结构型设计模式，它通过引入一个外观角色来简化客户端与子系统之间的交互，为复杂的子系统调用提供一个统一的入口，降低子系统与客户端的耦合度，且客户端调用非常方便。  外观模式又称为门面模式，它是一种对象结构型模式。外观模式是迪米特法则的一种具体实现，通过引入一个新的外观角色可以降低原有系统的复杂度，同时降低客户类与子系统的耦合度。  </p>
+<p>不使用外观模式的话，我们就需要创建各个子系统的对象实例，然后直接去调用子系统对象的相关方法，这会导致逻辑十分混乱，以后加接口的时候还要更改主进程。外观模式定义了一个高层、统一的接口，给子系统中的接口提供一个一致的界面（比如在高层接口提供四个方法ready,play,paus,end）,用来访问子系统中的一群接口。也就是说，通过定义一个一致的接口，用以屏蔽内部子系统的细节，使得调用端只需要跟这个接口发生调用，而无需关心子系统的内部细节。</p>
+<p>类似于遥控器一按，会自动帮我们做好一切的事情。  </p>
+<a id="more"></a>    
+
+<h1 id="类图"><a href="#类图" class="headerlink" title="类图"></a>类图</h1><p><img src="/images/%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F/ph1.png" alt="">   </p>
+<p>Facade类：为调用者提供统一的调用接口，外观类知道哪些子系统负责处理请求，从而将调用端的请求代理给适当的子系统对象。<br>SubSystem类：指模块或者子系统，处理Facade对象指派的任务，他是功能的提供者。  </p>
+<h1 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h1><h3 id="SubSystem"><a href="#SubSystem" class="headerlink" title="SubSystem"></a>SubSystem</h3><pre><code>class SubSystemA
+{
+    public void MethodA()
+    {
+        //业务实现代码
+    }
+}
+
+class SubSystemB
+{
+    public void MethodB()
+    {
+        //业务实现代码
+     }
+}
+
+class SubSystemC
+{
+    public void MethodC()
+    {
+        //业务实现代码
+    }
+}      </code></pre><h3 id="Facade"><a href="#Facade" class="headerlink" title="Facade"></a>Facade</h3><pre><code>class Facade
+{
+    private SubSystemA obj1 = new SubSystemA();
+    private SubSystemB obj2 = new SubSystemB();
+    private SubSystemC obj3 = new SubSystemC();
+
+    public void Method()
+    {
+        obj1.MethodA();
+        obj2.MethodB();
+        obj3.MethodC();
+    }
+}  </code></pre><h3 id="Client"><a href="#Client" class="headerlink" title="Client"></a>Client</h3><pre><code>Facade facade = new Facade();
+facade.Method();  </code></pre><h1 id="MyBatis中的外观模式"><a href="#MyBatis中的外观模式" class="headerlink" title="MyBatis中的外观模式"></a>MyBatis中的外观模式</h1><p>org.apache.ibatis.session.Configuration是MyBatis中的一个类，其实它就相当于外观模式的Facade  </p>
+<p><img src="/images/%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F/ph2.png" alt="">    </p>
+<p>在540行，我们看到Configuration在创建MetaObject时，使用了三个对象实例objectFactory, objectWrapperFactory, reflectorFactory，这其实就相当于三个SubSystem  </p>
+<p><img src="/images/%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F/ph3.png" alt="">   </p>
+<p>在126行我们看到了，Configuration确实有这个三个对象的实例  </p>
+<p><img src="/images/%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F/ph4.png" alt="">     </p>
+<p>这是forObject方法，里面的逻辑是如果object为null就返回，如果不为空就使用一个构造器 new出来一个新的MetaObject  </p>
+<p><img src="/images/%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F/ph5.png" alt="">      </p>
+<p>这是MetaObject的一个构造器，他把三个对象实例objectFactory, objectWrapperFactory, reflectorFactory 都赋值给了自己的对象里面的属性。根据Object类型不一样，使用不同的方法。  </p>
+<p>也就是说Configuration会根据Object类型来使用子系统来创建MetaObject。  </p>
+<p>对于创建一个MetaObject对象实例，使用的外观模式类图如下，根据Object来选择子系统也就是三个工厂对象实例。  </p>
+<p><img src="/images/%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F/ph6.png" alt="">       </p>
+<h1 id="外观模式的注意事项和细节"><a href="#外观模式的注意事项和细节" class="headerlink" title="外观模式的注意事项和细节"></a>外观模式的注意事项和细节</h1><p>外观模式对外屏蔽了子系统的细节，因此外观模式降低了客户端对子系统使用的复杂性，让子系统内部的模块更容易维护和扩展，通过合理的使用外观模式，可以帮我们更好的划分访问的层次。  </p>
+<p>当系统需要进行分层设计时，可以考虑使用外观模式，或者在维护一个遗留的大型系统时，可能这个系统已经变得非常难以维护和扩展，此时就可以考虑为新系统开发外观类，来提供遗留系统的比较清晰简单的接口，让新系统和外观类交互，提高复用性。  </p>
+<p>不要过多的或者不合理的使用外观模式，要考虑到实际的开发环境。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/zfb.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/wx.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+	<!-- 添加本文结束标记-->
+	
+	<div style="text-align:center;color: #DC943F;font-size:16px;">
+     -------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------
+     </div>
+	
+	<!-- 添加完成 -->
+	<!-- 开始添加版权声明-->
+		
+		
+		  <div class="declare" style="margin-left:36px;font-family:FangSong;">
+			<ul><li><strong>本文作者：</strong>
+			
+			  青青
+			
+			</li></ul>
+			<ul><li><strong>联系QQ：      </strong><a>&nbsp;&nbsp;1345212630</a></li></ul>
+			<ul><li><strong>联系邮箱： </strong><a>is_9366@163.com</a></li></ul>
+			<ul><li><strong>本文链接：</strong>
+			 <a href="https://qingqingxihuanlili.github.io/2020/01/23/%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F/" target="_blank" rel="noopener">https://qingqingxihuanlili.github.io/2020/01/23/%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F/</a>
+			</li></ul>
+			<ul><li><strong>版权声明：</strong>
+			本作品采用
+			<a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>
+			进行许可。转载请注明出处！
+			
+		  </div>
+		
+	<!-- 添加完成 -->
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/08/maven%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8Cidea%E4%B8%8B%E7%9A%84maven%E9%85%8D%E7%BD%AE/" class="archive-article-date">
-  	<time datetime="2020-01-08T01:01:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/08/maven%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8Cidea%E4%B8%8B%E7%9A%84maven%E9%85%8D%E7%BD%AE/">idea配置maven</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">idea</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">maven</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">外观模式</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/环境配置//" class="article-tag-list-link color5">环境配置</a>
+        			<a href="/categories/学习笔记//" class="article-tag-list-link color5">学习笔记</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://qingqingxihuanlili.github.io/2020/01/23/%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/08/idea%E9%85%8D%E7%BD%AEjdk-tomcat/" class="archive-article-date">
-  	<time datetime="2020-01-08T01:00:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-08</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/01/22/%E7%BB%84%E5%90%88%E6%A8%A1%E5%BC%8F/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">组合模式</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/08/idea%E9%85%8D%E7%BD%AEjdk-tomcat/">idea配置jdk和tomcat</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">idea</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">jdk</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">tomcat</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/环境配置//" class="article-tag-list-link color5">环境配置</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
+
+  
+
+  
+
+
+
+  <section id="comments" class="comments">
+    <style>
+      .comments{margin:30px;padding:10px;background:#fff}
+      @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
+    </style>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/07/IntelliJ%20IDEA%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85/" class="archive-article-date">
-  	<time datetime="2020-01-07T01:08:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/07/IntelliJ%20IDEA%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85/">IntelliJ IDEA下载安装</a>
-    </h1>
-  
+<div id="vcomment" class="comment"></div>
+<script src="//cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+<script src='//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js'></script>
+<script>
+   var notify = 'false' == true ? true : false;
+   var verify = 'false' == true ? true : false;
+   new Valine({
+            av: AV,
+            el: '#vcomment',
+            notify: notify,
+            verify: verify,
+            app_id: "DuJwRf0FQuyzfjTLAJl4Mmre-gzGzoHsz",
+            app_key: "MFLTq2lcP3inYcUbqBMjy5Ub",
+            placeholder: "ヾﾉ≧∀≦)o快来评论一下吧!",
+            avatar: "mm",
+            avatar_cdn: "",
+            pageSize: 10
+    });
+    if(window.location.hash){
+        var checkExist = setInterval(function() {
+           if ($(window.location.hash).length) {
+              $('html, body').animate({scrollTop: $(window.location.hash).offset().top-90}, 1000);
+              clearInterval(checkExist);
+           }
+        }, 100);
+    }
+</script>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">jetbrains</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">idea</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/软件安装//" class="article-tag-list-link color5">软件安装</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
+  </section>
 
 
           </div>
@@ -381,9 +526,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
