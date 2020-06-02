@@ -6,31 +6,27 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://qingqingxihuanlili.github.io">
-  <title>谷歌访问助手安装和使用 | qingqing αρέσει η lili</title>
+  <title>命令模式 | qingqing αρέσει η lili</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前言我们先来看一下google搜索和百度搜索的区别。你在google面前可以看到整个互联网，而当你打开百度，只能看到遮遮掩掩的中国局域网。google会给你你想要的，而百度会给你它想给你的。对于广告来说，每次用百度搜索都要下拉几条才可以看，因为前面几条都是广告。以前我使用的也是百度，后来接触到了google，然后…就使用google了，不得不说对于开发的人员来说，google给到的帮助实在是太大了">
+  <meta name="description" content="命令模式介绍在软件设计中，我们经常需要向某些对象发送请求，但是不知道请求的接收者是谁，也不知道被请求的操作是哪个，我们只需要程序运行时指定具体的请求接收者是谁，此时可以用命令模式。     命令模式使得请求发送者和请求接收者消除彼此之间的耦合，让对象之间的调用关系更加灵活，实现解耦。在命令模式中，会将一个请求封装为一个对象，以便使用不用参数来表示不同的请求（即命名），同时命令模式也支持可撤销的操作">
 <meta property="og:type" content="article">
-<meta property="og:title" content="谷歌访问助手安装和使用">
-<meta property="og:url" content="https://qingqingxihuanlili.github.io/2020/01/07/%E8%B0%B7%E6%AD%8C%E8%AE%BF%E9%97%AE%E5%8A%A9%E6%89%8B%E5%AE%89%E8%A3%85%E8%AF%B4%E6%98%8E/index.html">
+<meta property="og:title" content="命令模式">
+<meta property="og:url" content="https://qingqingxihuanlili.github.io/2020/01/27/%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F/index.html">
 <meta property="og:site_name" content="qingqing αρέσει η lili">
-<meta property="og:description" content="前言我们先来看一下google搜索和百度搜索的区别。你在google面前可以看到整个互联网，而当你打开百度，只能看到遮遮掩掩的中国局域网。google会给你你想要的，而百度会给你它想给你的。对于广告来说，每次用百度搜索都要下拉几条才可以看，因为前面几条都是广告。以前我使用的也是百度，后来接触到了google，然后…就使用google了，不得不说对于开发的人员来说，google给到的帮助实在是太大了">
+<meta property="og:description" content="命令模式介绍在软件设计中，我们经常需要向某些对象发送请求，但是不知道请求的接收者是谁，也不知道被请求的操作是哪个，我们只需要程序运行时指定具体的请求接收者是谁，此时可以用命令模式。     命令模式使得请求发送者和请求接收者消除彼此之间的耦合，让对象之间的调用关系更加灵活，实现解耦。在命令模式中，会将一个请求封装为一个对象，以便使用不用参数来表示不同的请求（即命名），同时命令模式也支持可撤销的操作">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://qingqingxihuanlili.github.io/images/%E8%B0%B7%E6%AD%8C%E8%AE%BF%E9%97%AE%E5%8A%A9%E6%89%8B%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8/%E8%A7%A3%E5%8E%8B%E5%AE%8C%E6%88%90%E5%9B%BE%E5%83%8F.png">
-<meta property="og:image" content="https://qingqingxihuanlili.github.io/images/%E8%B0%B7%E6%AD%8C%E8%AE%BF%E9%97%AE%E5%8A%A9%E6%89%8B%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8/%E6%89%93%E5%BC%80.png">
-<meta property="og:image" content="https://qingqingxihuanlili.github.io/images/%E8%B0%B7%E6%AD%8C%E8%AE%BF%E9%97%AE%E5%8A%A9%E6%89%8B%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8/%E5%BC%80%E5%8F%91%E8%80%85.png">
-<meta property="og:image" content="https://qingqingxihuanlili.github.io/images/%E8%B0%B7%E6%AD%8C%E8%AE%BF%E9%97%AE%E5%8A%A9%E6%89%8B%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8/%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F.png">
-<meta property="og:image" content="https://qingqingxihuanlili.github.io/images/%E8%B0%B7%E6%AD%8C%E8%AE%BF%E9%97%AE%E5%8A%A9%E6%89%8B%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8/%E6%94%B9%E5%90%8D.png">
-<meta property="og:image" content="https://qingqingxihuanlili.github.io/images/%E8%B0%B7%E6%AD%8C%E8%AE%BF%E9%97%AE%E5%8A%A9%E6%89%8B%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8/%E5%BF%BD%E7%95%A5.png">
-<meta property="og:image" content="https://qingqingxihuanlili.github.io/images/%E8%B0%B7%E6%AD%8C%E8%AE%BF%E9%97%AE%E5%8A%A9%E6%89%8B%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8/%E6%88%90%E5%8A%9F.png">
-<meta property="og:image" content="https://qingqingxihuanlili.github.io/images/%E8%B0%B7%E6%AD%8C%E8%AE%BF%E9%97%AE%E5%8A%A9%E6%89%8B%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8/%E4%BF%AE%E6%94%B9.png">
-<meta property="og:image" content="https://qingqingxihuanlili.github.io/images/%E8%B0%B7%E6%AD%8C%E8%AE%BF%E9%97%AE%E5%8A%A9%E6%89%8B%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8/%E5%AE%8C%E6%88%90.png">
-<meta property="article:published_time" content="2020-01-07T01:06:36.000Z">
-<meta property="article:modified_time" content="2020-01-07T03:48:44.038Z">
+<meta property="og:image" content="https://qingqingxihuanlili.github.io/images/%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F/ph1.png">
+<meta property="og:image" content="https://qingqingxihuanlili.github.io/images/%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F/ph2.png">
+<meta property="og:image" content="https://qingqingxihuanlili.github.io/images/%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F/ph3.png">
+<meta property="og:image" content="https://qingqingxihuanlili.github.io/images/%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F/ph4.png">
+<meta property="og:image" content="https://qingqingxihuanlili.github.io/images/%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F/ph5.png">
+<meta property="article:published_time" content="2020-01-27T09:38:51.000Z">
+<meta property="article:modified_time" content="2020-06-02T03:50:52.911Z">
 <meta property="article:author" content="青青">
-<meta property="article:tag" content="谷歌浏览器">
-<meta property="article:tag" content="谷歌访问助手">
+<meta property="article:tag" content="设计模式">
+<meta property="article:tag" content="命令模式">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://qingqingxihuanlili.github.io/images/%E8%B0%B7%E6%AD%8C%E8%AE%BF%E9%97%AE%E5%8A%A9%E6%89%8B%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8/%E8%A7%A3%E5%8E%8B%E5%AE%8C%E6%88%90%E5%9B%BE%E5%83%8F.png">
+<meta name="twitter:image" content="https://qingqingxihuanlili.github.io/images/%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F/ph1.png">
   
     <link rel="alternative" href="/atom.xml" title="qingqing αρέσει η lili" type="application/atom+xml">
   
@@ -178,44 +174,95 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-谷歌访问助手安装说明" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-命令模式" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      谷歌访问助手安装和使用
+      命令模式
     </h1>
   
 
         
-        <a href="/2020/01/07/%E8%B0%B7%E6%AD%8C%E8%AE%BF%E9%97%AE%E5%8A%A9%E6%89%8B%E5%AE%89%E8%A3%85%E8%AF%B4%E6%98%8E/" class="archive-article-date">
-  	<time datetime="2020-01-07T01:06:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-07</time>
+        <a href="/2020/01/27/%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
+  	<time datetime="2020-01-27T09:38:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-27</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>我们先来看一下google搜索和百度搜索的区别。<br>你在google面前可以看到整个互联网，而当你打开百度，只能看到遮遮掩掩的中国局域网。google会给你你想要的，而百度会给你它想给你的。对于广告来说，每次用百度搜索都要下拉几条才可以看，因为前面几条都是广告。<br>以前我使用的也是百度，后来接触到了google，然后…就使用google了，不得不说对于开发的人员来说，google给到的帮助实在是太大了。可是在国内你需要翻墙后才能访问和下载各种谷歌相关的内容，有没有不需要翻墙就可以简单的访问google的方法呢？ 还好谷歌的应用商店有着一款谷歌访问助手的插件，但是问题又来了，谷歌的应用商店我们也访问不到…<br>还好，我们可以不用访问应用商店安装~</p>
-<a id="more"></a>
-<h1 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h1><p>下载的话，我这里有一个链接<br>链接：<a href="https://pan.baidu.com/s/1hfurXLsL0XeK5iLw8eOa7g" target="_blank" rel="noopener">https://pan.baidu.com/s/1hfurXLsL0XeK5iLw8eOa7g</a><br>提取码：ngaf<br>复制这段内容后打开百度网盘手机App，操作更方便哦<br>你下载到的是一个.zip的压缩文件，之后我们把它解压缩，就像这样。  </p>
-<p><img src="/images/%E8%B0%B7%E6%AD%8C%E8%AE%BF%E9%97%AE%E5%8A%A9%E6%89%8B%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8/%E8%A7%A3%E5%8E%8B%E5%AE%8C%E6%88%90%E5%9B%BE%E5%83%8F.png" alt=""></p>
-<p>之后，打开我们的谷歌浏览器，看到最上角的三个小点了吗？ 点一下，打开更多工具的扩展程序，右上角有一个开发者模式，把它打开。  </p>
-<p><img src="/images/%E8%B0%B7%E6%AD%8C%E8%AE%BF%E9%97%AE%E5%8A%A9%E6%89%8B%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8/%E6%89%93%E5%BC%80.png" alt="">    </p>
-<p><img src="/images/%E8%B0%B7%E6%AD%8C%E8%AE%BF%E9%97%AE%E5%8A%A9%E6%89%8B%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8/%E5%BC%80%E5%8F%91%E8%80%85.png" alt="">  </p>
-<p>打开之后我们就能看到一行新增的菜单，分别是加载已解压的扩展程序，打包扩展程序，更新。<br>我们选择已加载的扩展程序，选择我们刚刚下载好的谷歌访问助手.crx文件（所在的整个文件夹），或者是直接把crx文件拖拽到页面。到此我们就算安装好了</p>
-<p><img src="/images/%E8%B0%B7%E6%AD%8C%E8%AE%BF%E9%97%AE%E5%8A%A9%E6%89%8B%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8/%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F.png" alt="">  </p>
-<h1 id="失败解决方案"><a href="#失败解决方案" class="headerlink" title="失败解决方案"></a>失败解决方案</h1><p>如果你失败了，那请接着往下看。<br>首先啊，你把那个插件.crx的后缀改成.rar。忽略告警提示，  </p>
-<p><img src="/images/%E8%B0%B7%E6%AD%8C%E8%AE%BF%E9%97%AE%E5%8A%A9%E6%89%8B%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8/%E6%94%B9%E5%90%8D.png" alt="">    </p>
-<p><img src="/images/%E8%B0%B7%E6%AD%8C%E8%AE%BF%E9%97%AE%E5%8A%A9%E6%89%8B%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8/%E5%BF%BD%E7%95%A5.png" alt="">   </p>
-<p>之后把这个rar文件在解压一次，然后选择已加载的扩展程序，选择这个新解压的文件夹应该就能安装成功了。<br>之前的那一堆就可以删掉了。</p>
-<h1 id="安装之后"><a href="#安装之后" class="headerlink" title="安装之后"></a>安装之后</h1><p>安装之后，会提示你激活的，当然是免费的，免费的条件居然是设置hao123为主页！<br>点击免费激活，在点击蓝色的选项也设置，之后设置网页就可以了。    </p>
-<p><img src="/images/%E8%B0%B7%E6%AD%8C%E8%AE%BF%E9%97%AE%E5%8A%A9%E6%89%8B%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8/%E6%88%90%E5%8A%9F.png" alt="">   </p>
-<p><img src="/images/%E8%B0%B7%E6%AD%8C%E8%AE%BF%E9%97%AE%E5%8A%A9%E6%89%8B%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8/%E4%BF%AE%E6%94%B9.png" alt="">    </p>
-<p><img src="/images/%E8%B0%B7%E6%AD%8C%E8%AE%BF%E9%97%AE%E5%8A%A9%E6%89%8B%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8/%E5%AE%8C%E6%88%90.png" alt="">  </p>
-<p>现在，我们的google就真的安装好了。</p>
+        <h1 id="命令模式介绍"><a href="#命令模式介绍" class="headerlink" title="命令模式介绍"></a>命令模式介绍</h1><p>在软件设计中，我们经常需要向某些对象发送请求，但是不知道请求的接收者是谁，也不知道被请求的操作是哪个，我们只需要程序运行时指定具体的请求接收者是谁，此时可以用命令模式。    </p>
+<p>命令模式使得请求发送者和请求接收者消除彼此之间的耦合，让对象之间的调用关系更加灵活，实现解耦。<br>在命令模式中，会将一个请求封装为一个对象，以便使用不用参数来<br>表示不同的请求（即命名），同时命令模式也支持可撤销的操作  </p>
+<p>将军发布命令，士兵去执行，其中有几个角色：将军（命令发布者，Invoker调用者），士兵（命令的具体执行者，Receiver被调用者），命令（连接将军和士兵，MyCommand实现Command接口）    </p>
+<a id="more"></a>     
+
+<h1 id="类图"><a href="#类图" class="headerlink" title="类图"></a>类图</h1><p><img src="/images/%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F/ph1.png" alt="">        </p>
+<p>Invoker：调用者角色<br>Command：命令角色，需要执行的所有命令都在这里，可以是接口或者抽象类<br>Receiver：接受者角色，知道如何实施和执行一个请求相关的操作<br>ConcreteCommand：将一个接受者对象与一个动作绑定，调用接受者相应的操作，实现execute  </p>
+<h1 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h1><h3 id="Command接口"><a href="#Command接口" class="headerlink" title="Command接口"></a>Command接口</h3><pre><code>public interface Command {
+    void execute();
+}  </code></pre><h3 id="ConcreteCommand类"><a href="#ConcreteCommand类" class="headerlink" title="ConcreteCommand类"></a>ConcreteCommand类</h3><pre><code>public class ConcreteCommand implements Command {
+
+    //持有相应的接收者对象
+    private Receiver receiver = null;
+    public ConcreteCommand(Receiver receiver){
+        this.receiver = receiver;
+    }
+    @Override
+    public void execute() {
+        //通常会转调接收者对象的相应方法，让接收者来真正执行功能
+        receiver.action();
+    }
+
+}  </code></pre><h3 id="Receiver类"><a href="#Receiver类" class="headerlink" title="Receiver类"></a>Receiver类</h3><pre><code>public class Receiver {
+    public void action(){
+        System.out.println(&quot;执行操作&quot;);
+    }
+}</code></pre><h3 id="Invoker类"><a href="#Invoker类" class="headerlink" title="Invoker类"></a>Invoker类</h3><pre><code>public class Invoker {
+
+    private Command command = null;
+
+    public Invoker(Command command){
+        this.command = command;
+    }
+
+    public void action(){
+
+        command.execute();
+    }
+}</code></pre><h3 id="Client类"><a href="#Client类" class="headerlink" title="Client类"></a>Client类</h3><pre><code>public static void main(String[] args) {
+
+    //创建接收者
+    Receiver receiver = new Receiver();
+
+    //创建命令对象，设定它的接收者
+    Command command = new ConcreteCommand(receiver);
+
+    //创建请求者，把命令对象设置进去
+    Invoker invoker = new Invoker(command);
+
+    //执行方法
+    invoker.action();
+}  </code></pre><h1 id="JdbcTemplate"><a href="#JdbcTemplate" class="headerlink" title="JdbcTemplate"></a>JdbcTemplate</h1><p>Spring中JdbcTemplate类是用来处理SQL语句的，它里面有.update方法和.query方法分别实现插入和查找。    </p>
+<p><img src="/images/%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F/ph2.png" alt="">  </p>
+<p>这是JdbcTemplate的query方法，我们发现第432行，它在方法内声明了一个内部类QueryStatementCallback它实现了一个叫做StatementCallback的接口，我们打开它  </p>
+<pre><code>class QueryStatementCallback implements StatementCallback&lt;T&gt;, SqlProvider  </code></pre><p><img src="/images/%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F/ph3.png" alt="">     </p>
+<p>这个StatementCallback接口其实就相当于我们命令模式的Command接口，他里面有一个抽象方法doInStatement需要被实现它的类实现。   QueryStatementCallback实现了这个接口，也实现了这个方法，他是ConcreteCommand类，而且这个方法的451行  </p>
+<pre><code>return execute(new QueryStatementCallback());  </code></pre><p>和ConcreteCommand的方法很相似，而他调用的还是QueryStatementCallback()这个方法。同时他又充当了Receiver类，Receiver这个类没有重新写  </p>
+<p>那么调用它的Invoker类是谁呢  </p>
+<p><img src="/images/%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F/ph4.png" alt="">      </p>
+<p>就在这个方法下面，我们发现就是JdbcTemplate这个里面的方法调用了命令方法，使用JdbcTemplate就是我们的Invoker类。  </p>
+<p>Invoker类是JdbcTemplate<br>Command接口是StatementCallback<br>ConcreteCommand类是QueryStatementCallback他是JdbcTemplate的内部类，而且Receiver也是QueryStatementCallback。  </p>
+<p>同理   </p>
+<p><img src="/images/%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F/ph5.png" alt="">    </p>
+<p>ExecuteStatementCallback类也继承了StatementCallback ，也是JdbcTemplate的内部类，他和上面是一样的。    </p>
+<h1 id="命令模式总结"><a href="#命令模式总结" class="headerlink" title="命令模式总结"></a>命令模式总结</h1><p>命令模式将发起请求的对象与执行请求的对象解耦。发起请求的对象是调用者，调用者只要调用命令对象的execute()方法就可以让接收者工作，而不必知道具体的接收者对象是谁、是如何实现的，命令对象会负责让接收者执行请求的动作，也就是说：”请求发者”和“请求执行者”之间的解耦是通过命令对象实现的，命令对象起到了纽带桥梁的作用。  </p>
+<p>容易设计一个命令队列。只要把命令对象放到列队，就可以多线程的执行命令  </p>
+<p>容易实现对请求的撤销和重做  </p>
+<p>命令模式不足：可能导致某些系统有过多的具体命令类，增加了系统的复杂度。  </p>
+<p>命令模式经典的应用场景：界面的一个按钮都是一条命令、模拟CMD（DOS命令） 订单的撤销/恢复、触发-反馈机制</p>
 
       
 
@@ -271,7 +318,7 @@
 			<ul><li><strong>联系QQ：      </strong><a>&nbsp;&nbsp;1345212630</a></li></ul>
 			<ul><li><strong>联系邮箱： </strong><a>is_9366@163.com</a></li></ul>
 			<ul><li><strong>本文链接：</strong>
-			 <a href="https://qingqingxihuanlili.github.io/2020/01/07/%E8%B0%B7%E6%AD%8C%E8%AE%BF%E9%97%AE%E5%8A%A9%E6%89%8B%E5%AE%89%E8%A3%85%E8%AF%B4%E6%98%8E/" target="_blank" rel="noopener">https://qingqingxihuanlili.github.io/2020/01/07/%E8%B0%B7%E6%AD%8C%E8%AE%BF%E9%97%AE%E5%8A%A9%E6%89%8B%E5%AE%89%E8%A3%85%E8%AF%B4%E6%98%8E/</a>
+			 <a href="https://qingqingxihuanlili.github.io/2020/01/27/%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F/" target="_blank" rel="noopener">https://qingqingxihuanlili.github.io/2020/01/27/%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F/</a>
 			</li></ul>
 			<ul><li><strong>版权声明：</strong>
 			本作品采用
@@ -289,11 +336,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">谷歌浏览器</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">谷歌访问助手</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">命令模式</a>
         		</li>
       		
 		</ul>
@@ -306,7 +353,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/软件安装//" class="article-tag-list-link color5">软件安装</a>
+        			<a href="/categories/学习笔记//" class="article-tag-list-link color5">学习笔记</a>
         		</li>
       		
 		</ul>
@@ -361,7 +408,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://qingqingxihuanlili.github.io/2020/01/07/%E8%B0%B7%E6%AD%8C%E8%AE%BF%E9%97%AE%E5%8A%A9%E6%89%8B%E5%AE%89%E8%A3%85%E8%AF%B4%E6%98%8E/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://qingqingxihuanlili.github.io/2020/01/27/%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -375,15 +422,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/01/07/WebStorm%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          WebStorm下载安装
-        
-      </div>
-    </a>
   
+    <a href="/2020/01/26/%E6%A8%A1%E6%9D%BF%E6%A8%A1%E5%BC%8F/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">模板模式</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
