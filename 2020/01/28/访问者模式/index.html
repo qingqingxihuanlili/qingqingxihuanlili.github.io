@@ -6,27 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://qingqingxihuanlili.github.io">
-  <title>命令模式 | qingqing αρέσει η lili</title>
+  <title>访问者模式 | qingqing αρέσει η lili</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="命令模式介绍在软件设计中，我们经常需要向某些对象发送请求，但是不知道请求的接收者是谁，也不知道被请求的操作是哪个，我们只需要程序运行时指定具体的请求接收者是谁，此时可以用命令模式。     命令模式使得请求发送者和请求接收者消除彼此之间的耦合，让对象之间的调用关系更加灵活，实现解耦。在命令模式中，会将一个请求封装为一个对象，以便使用不用参数来表示不同的请求（即命名），同时命令模式也支持可撤销的操作">
+  <meta name="description" content="访问者模式介绍封装某些作用于某种数据结构中各元素的操作，它可以在不改变数据结构的前提下定义作用于这些元素的新的操作。   主要将数据结构与数据操作分离，解决稳定的数据结构和易变的操作耦合问题，需要对一个对象结构中的对象进行很多不同的并且不相关的操作，而需要避免让这些操作”污染”这些对象的类，使用访问者模式将这些封装到类中。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="命令模式">
-<meta property="og:url" content="https://qingqingxihuanlili.github.io/2020/01/27/%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F/index.html">
+<meta property="og:title" content="访问者模式">
+<meta property="og:url" content="https://qingqingxihuanlili.github.io/2020/01/28/%E8%AE%BF%E9%97%AE%E8%80%85%E6%A8%A1%E5%BC%8F/index.html">
 <meta property="og:site_name" content="qingqing αρέσει η lili">
-<meta property="og:description" content="命令模式介绍在软件设计中，我们经常需要向某些对象发送请求，但是不知道请求的接收者是谁，也不知道被请求的操作是哪个，我们只需要程序运行时指定具体的请求接收者是谁，此时可以用命令模式。     命令模式使得请求发送者和请求接收者消除彼此之间的耦合，让对象之间的调用关系更加灵活，实现解耦。在命令模式中，会将一个请求封装为一个对象，以便使用不用参数来表示不同的请求（即命名），同时命令模式也支持可撤销的操作">
+<meta property="og:description" content="访问者模式介绍封装某些作用于某种数据结构中各元素的操作，它可以在不改变数据结构的前提下定义作用于这些元素的新的操作。   主要将数据结构与数据操作分离，解决稳定的数据结构和易变的操作耦合问题，需要对一个对象结构中的对象进行很多不同的并且不相关的操作，而需要避免让这些操作”污染”这些对象的类，使用访问者模式将这些封装到类中。">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://qingqingxihuanlili.github.io/images/%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F/ph1.png">
-<meta property="og:image" content="https://qingqingxihuanlili.github.io/images/%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F/ph2.png">
-<meta property="og:image" content="https://qingqingxihuanlili.github.io/images/%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F/ph3.png">
-<meta property="og:image" content="https://qingqingxihuanlili.github.io/images/%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F/ph4.png">
-<meta property="og:image" content="https://qingqingxihuanlili.github.io/images/%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F/ph5.png">
-<meta property="article:published_time" content="2020-01-27T09:38:51.000Z">
-<meta property="article:modified_time" content="2020-06-02T03:50:52.911Z">
+<meta property="og:image" content="https://qingqingxihuanlili.github.io/images/%E8%AE%BF%E9%97%AE%E8%80%85%E6%A8%A1%E5%BC%8F/ph1.png">
+<meta property="article:published_time" content="2020-01-28T05:36:14.000Z">
+<meta property="article:modified_time" content="2020-06-02T07:57:03.348Z">
 <meta property="article:author" content="青青">
 <meta property="article:tag" content="设计模式">
-<meta property="article:tag" content="命令模式">
+<meta property="article:tag" content="访问者模式">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://qingqingxihuanlili.github.io/images/%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F/ph1.png">
+<meta name="twitter:image" content="https://qingqingxihuanlili.github.io/images/%E8%AE%BF%E9%97%AE%E8%80%85%E6%A8%A1%E5%BC%8F/ph1.png">
   
     <link rel="alternative" href="/atom.xml" title="qingqing αρέσει η lili" type="application/atom+xml">
   
@@ -174,95 +170,94 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-命令模式" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-访问者模式" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      命令模式
+      访问者模式
     </h1>
   
 
         
-        <a href="/2020/01/27/%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-01-27T09:38:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-27</time>
+        <a href="/2020/01/28/%E8%AE%BF%E9%97%AE%E8%80%85%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
+  	<time datetime="2020-01-28T05:36:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-28</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="命令模式介绍"><a href="#命令模式介绍" class="headerlink" title="命令模式介绍"></a>命令模式介绍</h1><p>在软件设计中，我们经常需要向某些对象发送请求，但是不知道请求的接收者是谁，也不知道被请求的操作是哪个，我们只需要程序运行时指定具体的请求接收者是谁，此时可以用命令模式。    </p>
-<p>命令模式使得请求发送者和请求接收者消除彼此之间的耦合，让对象之间的调用关系更加灵活，实现解耦。<br>在命令模式中，会将一个请求封装为一个对象，以便使用不用参数来<br>表示不同的请求（即命名），同时命令模式也支持可撤销的操作  </p>
-<p>将军发布命令，士兵去执行，其中有几个角色：将军（命令发布者，Invoker调用者），士兵（命令的具体执行者，Receiver被调用者），命令（连接将军和士兵，MyCommand实现Command接口）    </p>
-<a id="more"></a>     
+        <h1 id="访问者模式介绍"><a href="#访问者模式介绍" class="headerlink" title="访问者模式介绍"></a>访问者模式介绍</h1><p>封装某些作用于某种数据结构中各元素的操作，它可以在不改变数据结构的前提下定义作用于这些元素的新的操作。  </p>
+<p>主要将数据结构与数据操作分离，解决稳定的数据结构和易变的操作耦合问题，需要对一个对象结构中的对象进行很多不同的并且不相关的操作，而需要避免让这些操作”污染”这些对象的类，使用访问者模式将这些封装到类中。  </p>
+<a id="more"></a>   
 
-<h1 id="类图"><a href="#类图" class="headerlink" title="类图"></a>类图</h1><p><img src="/images/%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F/ph1.png" alt="">        </p>
-<p>Invoker：调用者角色<br>Command：命令角色，需要执行的所有命令都在这里，可以是接口或者抽象类<br>Receiver：接受者角色，知道如何实施和执行一个请求相关的操作<br>ConcreteCommand：将一个接受者对象与一个动作绑定，调用接受者相应的操作，实现execute  </p>
-<h1 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h1><h3 id="Command接口"><a href="#Command接口" class="headerlink" title="Command接口"></a>Command接口</h3><pre><code>public interface Command {
-    void execute();
-}  </code></pre><h3 id="ConcreteCommand类"><a href="#ConcreteCommand类" class="headerlink" title="ConcreteCommand类"></a>ConcreteCommand类</h3><pre><code>public class ConcreteCommand implements Command {
+<h1 id="类图"><a href="#类图" class="headerlink" title="类图"></a>类图</h1><p><img src="/images/%E8%AE%BF%E9%97%AE%E8%80%85%E6%A8%A1%E5%BC%8F/ph1.png" alt="">   </p>
+<p>Visitor 是抽象访问者，为该对象结构中的ConcreteElement的每一个类声明一个visit操作。<br>ConcreteVisitor ：是一个具体的访问值 实现每个有Visitor 声明的操作，是每个操作实现的部分。<br>ObjectStructure 能枚举它的元素， 可以提供一个高层的接口，用来允许访问者访问元素。<br>Element 定义一个accept 方法，接收一个访问者对象。<br>ConcreteElement 为具体元素，实现了accept 方法。  </p>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><h3 id="Visitor抽象访问者"><a href="#Visitor抽象访问者" class="headerlink" title="Visitor抽象访问者"></a>Visitor抽象访问者</h3><p>抽象访问者，为该对象结构中具体元素角色声明一个访问操作接口。</p>
+<pre><code>public interface Visitor {
 
-    //持有相应的接收者对象
-    private Receiver receiver = null;
-    public ConcreteCommand(Receiver receiver){
-        this.receiver = receiver;
-    }
+    void visit(ConcreteElementA a);
+    void visit(ConcreteElementB b);
+
+}   </code></pre><h3 id="ConcreteVisitor具体访问者"><a href="#ConcreteVisitor具体访问者" class="headerlink" title="ConcreteVisitor具体访问者"></a>ConcreteVisitor具体访问者</h3><p>具体访问者，实现了Vistor中定义的操作。  </p>
+<pre><code>public class ConcreteVisitor implements Visitor {
+
     @Override
-    public void execute() {
-        //通常会转调接收者对象的相应方法，让接收者来真正执行功能
-        receiver.action();
+    public void visit(ConcreteElementA a) {
+        a.operation();
     }
 
-}  </code></pre><h3 id="Receiver类"><a href="#Receiver类" class="headerlink" title="Receiver类"></a>Receiver类</h3><pre><code>public class Receiver {
-    public void action(){
-        System.out.println(&quot;执行操作&quot;);
+    @Override
+    public void visit(ConcreteElementB b) {
+        b.operation();
     }
-}</code></pre><h3 id="Invoker类"><a href="#Invoker类" class="headerlink" title="Invoker类"></a>Invoker类</h3><pre><code>public class Invoker {
+}  </code></pre><h3 id="Element抽象元素角色"><a href="#Element抽象元素角色" class="headerlink" title="Element抽象元素角色"></a>Element抽象元素角色</h3><p>抽象元素角色，定义了一个accept操作，以Visitor作为参数。  </p>
+<pre><code>public interface Element {
 
-    private Command command = null;
+    //接受一个抽象访问者访问
+    void accept(Visitor visitor);
 
-    public Invoker(Command command){
-        this.command = command;
+}  </code></pre><h3 id="ConcreteElement具体元素"><a href="#ConcreteElement具体元素" class="headerlink" title="ConcreteElement具体元素"></a>ConcreteElement具体元素</h3><p>具体元素，允许visitor访问本对象的数据结构。 </p>
+<pre><code>public class ConcreteElementA implements Element {
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visit(this);
+    }
+}  </code></pre><h3 id="ObjectStructure对象结构"><a href="#ObjectStructure对象结构" class="headerlink" title="ObjectStructure对象结构"></a>ObjectStructure对象结构</h3><p>对象结构，是元素的集合，提供元素的访问入口。</p>
+<pre><code>public class ObjectStructure {
+
+    // 使用集合保存Element元素，示例没有考虑多线程的问题。
+    private ArrayList&lt;Element&gt; elements = new ArrayList&lt;&gt;();
+
+    // 访问者访问元素的入口
+    public void accept(Visitor visitor) {
+        for (int i = 0; i &lt; elements.size(); i++) {
+            Element element = elements.get(i);
+            element.accept(visitor);
+        }
     }
 
-    public void action(){
-
-        command.execute();
+    // 把元素加入到集合
+    public void addElement(Element element) {
+        elements.add(element);
     }
-}</code></pre><h3 id="Client类"><a href="#Client类" class="headerlink" title="Client类"></a>Client类</h3><pre><code>public static void main(String[] args) {
 
-    //创建接收者
-    Receiver receiver = new Receiver();
+    // 把元素从集合中移除
+    public void removeElement(Element element) {
+        elements.remove(element);
+    }
+}  </code></pre><h3 id="Client类"><a href="#Client类" class="headerlink" title="Client类"></a>Client类</h3><pre><code>public static void main(String[] args) {
 
-    //创建命令对象，设定它的接收者
-    Command command = new ConcreteCommand(receiver);
-
-    //创建请求者，把命令对象设置进去
-    Invoker invoker = new Invoker(command);
-
-    //执行方法
-    invoker.action();
-}  </code></pre><h1 id="JdbcTemplate"><a href="#JdbcTemplate" class="headerlink" title="JdbcTemplate"></a>JdbcTemplate</h1><p>Spring中JdbcTemplate类是用来处理SQL语句的，它里面有.update方法和.query方法分别实现插入和查找。    </p>
-<p><img src="/images/%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F/ph2.png" alt="">  </p>
-<p>这是JdbcTemplate的query方法，我们发现第432行，它在方法内声明了一个内部类QueryStatementCallback它实现了一个叫做StatementCallback的接口，我们打开它  </p>
-<pre><code>class QueryStatementCallback implements StatementCallback&lt;T&gt;, SqlProvider  </code></pre><p><img src="/images/%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F/ph3.png" alt="">     </p>
-<p>这个StatementCallback接口其实就相当于我们命令模式的Command接口，他里面有一个抽象方法doInStatement需要被实现它的类实现。   QueryStatementCallback实现了这个接口，也实现了这个方法，他是ConcreteCommand类，而且这个方法的451行  </p>
-<pre><code>return execute(new QueryStatementCallback());  </code></pre><p>和ConcreteCommand的方法很相似，而他调用的还是QueryStatementCallback()这个方法。同时他又充当了Receiver类，Receiver这个类没有重新写  </p>
-<p>那么调用它的Invoker类是谁呢  </p>
-<p><img src="/images/%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F/ph4.png" alt="">      </p>
-<p>就在这个方法下面，我们发现就是JdbcTemplate这个里面的方法调用了命令方法，使用JdbcTemplate就是我们的Invoker类。  </p>
-<p>Invoker类是JdbcTemplate<br>Command接口是StatementCallback<br>ConcreteCommand类是QueryStatementCallback他是JdbcTemplate的内部类，而且Receiver也是QueryStatementCallback。  </p>
-<p>同理   </p>
-<p><img src="/images/%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F/ph5.png" alt="">    </p>
-<p>ExecuteStatementCallback类也继承了StatementCallback ，也是JdbcTemplate的内部类，他和上面是一样的。    </p>
-<h1 id="命令模式总结"><a href="#命令模式总结" class="headerlink" title="命令模式总结"></a>命令模式总结</h1><p>命令模式将发起请求的对象与执行请求的对象解耦。发起请求的对象是调用者，调用者只要调用命令对象的execute()方法就可以让接收者工作，而不必知道具体的接收者对象是谁、是如何实现的，命令对象会负责让接收者执行请求的动作，也就是说：”请求发者”和“请求执行者”之间的解耦是通过命令对象实现的，命令对象起到了纽带桥梁的作用。  </p>
-<p>容易设计一个命令队列。只要把命令对象放到列队，就可以多线程的执行命令  </p>
-<p>容易实现对请求的撤销和重做  </p>
-<p>命令模式不足：可能导致某些系统有过多的具体命令类，增加了系统的复杂度。  </p>
-<p>命令模式经典的应用场景：界面的一个按钮都是一条命令、模拟CMD（DOS命令） 订单的撤销/恢复、触发-反馈机制</p>
+    Element e = new ConcreteElementA();
+    ObjectStructure objectStructure = new ObjectStructure();
+    objectStructure.addElement(e);
+    Visitor visitor = new ConcreteVisitor();
+    objectStructure.accept(visitor);
+}</code></pre><h1 id="访问者模式优缺点"><a href="#访问者模式优缺点" class="headerlink" title="访问者模式优缺点"></a>访问者模式优缺点</h1><p>访问者模式符合单一职责原则、让程序具有优秀的扩展性、灵活性非常高。<br>访问者模式可以对功能进行统一，可以做报表、UI、拦截器与过滤器，适用于数据结构相对稳定的系统  </p>
+<p>具体元素对访问者公布细节，也就是说访问者关注了其他类的内部细节，这是迪米特法则所不建议的, 这样造成了具体元素变更比较困难。<br>违背了依赖倒转原则。访问者依赖的是具体元素，而不是抽象元素。<br>因此，如果一个系统有比较稳定的数据结构，又有经常变化的功能需求，那么访问者模式就是比较合适的.</p>
 
       
 
@@ -318,7 +313,7 @@
 			<ul><li><strong>联系QQ：      </strong><a>&nbsp;&nbsp;1345212630</a></li></ul>
 			<ul><li><strong>联系邮箱： </strong><a>is_9366@163.com</a></li></ul>
 			<ul><li><strong>本文链接：</strong>
-			 <a href="https://qingqingxihuanlili.github.io/2020/01/27/%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F/" target="_blank" rel="noopener">https://qingqingxihuanlili.github.io/2020/01/27/%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F/</a>
+			 <a href="https://qingqingxihuanlili.github.io/2020/01/28/%E8%AE%BF%E9%97%AE%E8%80%85%E6%A8%A1%E5%BC%8F/" target="_blank" rel="noopener">https://qingqingxihuanlili.github.io/2020/01/28/%E8%AE%BF%E9%97%AE%E8%80%85%E6%A8%A1%E5%BC%8F/</a>
 			</li></ul>
 			<ul><li><strong>版权声明：</strong>
 			本作品采用
@@ -340,7 +335,7 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">命令模式</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">访问者模式</a>
         		</li>
       		
 		</ul>
@@ -408,7 +403,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://qingqingxihuanlili.github.io/2020/01/27/%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://qingqingxihuanlili.github.io/2020/01/28/%E8%AE%BF%E9%97%AE%E8%80%85%E6%A8%A1%E5%BC%8F/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -422,18 +417,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/01/28/%E8%AE%BF%E9%97%AE%E8%80%85%E6%A8%A1%E5%BC%8F/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          访问者模式
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/01/26/%E6%A8%A1%E6%9D%BF%E6%A8%A1%E5%BC%8F/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">模板模式</div>
+    <a href="/2020/01/27/%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">命令模式</div>
       <i class="icon-circle-right"></i>
     </a>
   
